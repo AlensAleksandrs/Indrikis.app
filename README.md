@@ -1,6 +1,6 @@
 # Vue Template (Vite + Tailwind + Playwright + Docker + K8s)
 
-[![license: LGPL v3.0 or later](https://img.shields.io/badge/License-LGPL%20v3.0%2B-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0.html)
+[![license: Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg)](./LICENSE)
 [![version](https://img.shields.io/github/package-json/v/AlensAleksandrs/Vue.tmpl?filename=package.json)](https://github.com/AlensAleksandrs/ForumsKubs/blob/main/package.json)
 
 A modern starter template for Vue 3 applications built with Vite.  
@@ -115,8 +115,8 @@ Pair with a `Service` for production.
 
 ## License
 
-This template is licensed under the terms of the GPL-3 Open Source license and is available for free. 
-Learn more in the license file found within the repository!
+This software is proprietary and all rights are reserved. It is not licensed under any open source license and may not be copied, modified, or distributed 
+without explicit permission from the copyright holder. For details, see the LICENSE file in this repository.
 
 ## Links
 
