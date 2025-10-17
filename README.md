@@ -47,7 +47,6 @@ To run the GitHub Actions workflow for building and pushing Docker images, you n
 
 ⚠ Repository name must be lowercase (Docker Hub enforced policy)!
 
-
 #### 1. Install dependencies
 
 ```bash
