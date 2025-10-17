@@ -77,10 +77,13 @@ npx stylelint "src/**/*.{css,vue}"
 This template ships with Vitest (unit tests) and Playwright (E2E tests).
 
 - Run unit tests with:
+
 ```bash
 npm run test:unit
 ```
+
 - Run end-to-end tests with:
+
 ```bash
 npm run test:e2e
 ```
@@ -91,6 +94,7 @@ GitHub Actions workflow runs linting, unit tests, e2e tests, and Docker builds a
 
 **Docker**
 Build and run the Docker image:
+
 ```bash
 docker build -t (name_of_project) .
 docker run -p 8080:80 (name_of_project)
@@ -98,9 +102,11 @@ docker run -p 8080:80 (name_of_project)
 
 **Kubernetes**
 A sample `deployment.yaml` is included:
+
 ```bash
 kubectl apply -f k8s/deployment.yaml
 ```
+
 Pair with a `Service` for production.
 
 #### ✅ Done!
@@ -115,7 +121,7 @@ Pair with a `Service` for production.
 
 ## License
 
-This software is proprietary and all rights are reserved. It is not licensed under any open source license and may not be copied, modified, or distributed 
+This software is proprietary and all rights are reserved. It is not licensed under any open source license and may not be copied, modified, or distributed
 without explicit permission from the copyright holder. For details, see the LICENSE file in this repository.
 
 ## Links
