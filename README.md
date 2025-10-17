@@ -45,6 +45,9 @@ To run the GitHub Actions workflow for building and pushing Docker images, you n
 - `PROJECT_NAME`  
   The name of your Docker Hub repository (example: `vue-tmpl`).
 
+⚠ Repository name must be lowercase (Docker Hub enforced policy)!
+
+
 #### 1. Install dependencies
 
 ```bash
