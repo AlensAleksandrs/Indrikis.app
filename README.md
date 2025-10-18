@@ -36,12 +36,14 @@ It comes with TailwindCSS, Vitest, Playwright, GitHub Actions CI/CD, Dockerfile,
 To run the GitHub Actions workflow for building and pushing Docker images, you need to configure the following in your repository settings:
 
 ##### Secrets
+
 - `DOCKER_USERNAME`  
-  Your Docker Hub username.  
+  Your Docker Hub username.
 - `DOCKER_TOKEN`  
   A Docker Hub [access token](https://hub.docker.com/settings/security) with permission to push images.
 
 ##### Variables
+
 - `PROJECT_NAME`  
   The name of your Docker Hub repository (example: `vue-tmpl`).
 
