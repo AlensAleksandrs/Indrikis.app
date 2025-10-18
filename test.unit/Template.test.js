@@ -1,6 +1,7 @@
 import { mount } from '@vue/test-utils'
 import { describe, it, expect } from 'vitest'
 import { createRouter, createWebHistory } from 'vue-router'
+import { i18n } from '@/i18n'
 
 import App from '../src/App.vue'
 import HomeView from '../src/views/HomeView.vue'
@@ -19,11 +20,10 @@ describe('App.vue', () => {
 
     const wrapper = mount(App, {
       global: {
-        plugins: [router],
+        plugins: [router, i18n],
       },
     })
 
-    expect(wrapper.html()).toContain('src/App.vue has been loaded successfully')
-    expect(wrapper.html()).toContain('You are currently accessing src/views/HomeView.vue')
+    expect(wrapper.html()).toContain('Jūs pašlaik piekļūstat src/views/HomeView.vue')
   })
 })
