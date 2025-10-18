@@ -1,7 +1,9 @@
-<script setup></script>
+<script setup lang="ts">
+import { useDark } from '@vueuse/core'
+useDark()
+</script>
 
 <template>
-  <h1>src/App.vue has been loaded successfully</h1>
   <RouterView />
 </template>
 

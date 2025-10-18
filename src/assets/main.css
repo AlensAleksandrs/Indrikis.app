@@ -1,6 +1,18 @@
 @import 'tailwindcss';
 
+@font-face {
+  font-family: figtree;
+  src: url('@/assets/Figtree/Figtree-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
+  --font-sans: figtree, ui-sans-serif, system-ui;
+
   /* Text (light) */
   --color-t-l-default: #181e2d;
   --color-t-l-d2: #151b28;
