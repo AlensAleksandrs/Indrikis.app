@@ -6,6 +6,28 @@
       "terms-of-service": "Lietošanas noteikumi"
     }
   },
+  "view": {
+    "landing": {
+      "welcome": "Laipni lūgti atpakaļ!",
+      "quotes": {
+        "1": "Ja tu tici, ka tas izdosies, tu redzēsi iespējas. Ja tu tici, ka neizdosies, tu redzēsi šķēršļus",
+        "2": "Labākais veids, kā sākt, ir pārtraukt runāt un sākt darīt",
+        "3": "Neskaties uz pulksteni; dari to, ko tas dara. Turpini iet uz priekšu"
+      },
+      "authors": {
+        "1": "Veins Dajers",
+        "2": "Volts Disnejs",
+        "3": "Sems Levensons"
+      },
+      "login": "Pieslēgties",
+      "forgot-password":"Neatceries paroli?"
+    }
+  },
+  "function": {
+    "google": {
+      "login": "Pieslēgties ar Google"
+    }
+  },
   "home": {
     "title": "Jūs pašlaik piekļūstat src/views/HomeView.vue",
     "switch": "Nospiediet, lai pārslēgtu tēmu",

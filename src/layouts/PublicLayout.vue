@@ -11,12 +11,13 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div class="max-w-[1000px] w-screen h-screen flex flex-col bg-b-l-default dark:bg-b-d-l8 shadow-sm">
+  <div class="max-w-[1000px] w-screen h-screen overflow-scroll flex flex-col bg-b-l-default dark:bg-b-d-l8 shadow-sm">
     <header class="w-full pt-10 p-4 md:p-12 md:pb-4 flex flex-row justify-between items-end">
       <IndrikisAppLogo/>
       <div class="flex flex-row gap-8">
         <InternalSite href="/help">{{ t('layout.public.help') }}</InternalSite>
         <ThemeSelect/>
+        <LanguageSelect/>
       </div>
     </header>
     <main class="grow">
@@ -27,7 +28,6 @@ const { t } = useI18n()
         <InternalSite href="/privacy-policy">{{ t('layout.public.privacy-policy') }}</InternalSite>
         <InternalSite href="/terms-of-service">{{ t('layout.public.terms-of-service') }}</InternalSite>
       </div>
-      <LanguageSelect/>
     </footer>
   </div>
 </template>

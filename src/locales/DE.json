@@ -1,9 +1,31 @@
 {
   "layout": {
-  "public": {
-    "help": "Unterstützung",
-    "privacy-policy": "Datenschutzerklärung",
-    "terms-of-service": "Nutzungsbedingungen"
+    "public": {
+      "help": "Unterstützung",
+      "privacy-policy": "Datenschutzerklärung",
+      "terms-of-service": "Nutzungsbedingungen"
+    }
+  },
+  "view": {
+    "landing": {
+      "welcome": "Willkommen zurück!",
+      "quotes": {
+        "1": "Wenn du glaubst, dass es funktioniert, wirst du Chancen sehen. Wenn du glaubst, dass es nicht funktioniert, wirst du Hindernisse sehen",
+        "2": "Der beste Weg anzufangen ist aufzuhören zu reden und anzufangen zu handeln",
+        "3": "Schau nicht auf die Uhr; tu, was sie tut. Mach weiter"
+      },
+      "authors": {
+        "1": "Wayne Dyer",
+        "2": "Walt Disney",
+        "3": "Sam Levenson"
+      },
+      "login": "Anmelden",
+      "forgot-password":"Passwort vergessen?"
+    }
+  },
+  "function": {
+    "google": {
+      "login": "Mit Google anmelden"
     }
   },
   "home": {

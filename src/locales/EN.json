@@ -6,6 +6,28 @@
       "terms-of-service": "Terms of Service"
     }
   },
+  "view": {
+    "landing": {
+      "welcome": "Welcome back!",
+      "quotes": {
+        "1": "If you believe it will work, you'll see opportunities. If you believe it won't, you will see obstacles",
+        "2": "The best way to get started is to quit talking and begin doing",
+        "3": "Don’t watch the clock; do what it does. Keep going"
+      },
+      "authors": {
+        "1": "Wayne Dyer",
+        "2": "Walt Disney",
+        "3": "Sam Levenson"
+      },
+      "login": "Login",
+      "forgot-password":"Forgot password?"
+    }
+  },
+  "function": {
+    "google": {
+      "login": "Login with Google"
+    }
+  },
   "home": {
     "title": "You are currently accessing src/views/HomeView.vue",
     "switch": "Press to switch theme",

@@ -1,5 +1,5 @@
-<script setup>
-import { ref } from "vue";
+<script setup lang="ts">
+import { ref, onMounted, onBeforeUnmount } from "vue";
 
 defineProps({
   selection: { type: String, default: "ABC" },
@@ -8,6 +8,7 @@ defineProps({
 
 const emit = defineEmits(["update:selection"]);
 const open = ref(false);
+const dropdownRef = ref<HTMLElement | null>(null);
 
 function toggle() {
   open.value = !open.value;
@@ -17,10 +18,24 @@ function selectOption(option) {
   emit("update:selection", option);
   open.value = false;
 }
+function handleClickOutside(e: MouseEvent) {
+  if (dropdownRef.value && !dropdownRef.value.contains(e.target as Node)) {
+    open.value = false;
+  }
+}
+
+onMounted(() => {
+  document.addEventListener("click", handleClickOutside);
+});
+
+onBeforeUnmount(() => {
+  document.removeEventListener("click", handleClickOutside);
+});
+
 </script>
 
 <template>
-  <div class="relative inline-block text-left">
+  <div ref="dropdownRef" class="relative inline-block text-left">
     <button
       type="button"
       class="flex items-center text-sm
@@ -35,7 +50,7 @@ function selectOption(option) {
 
     <ul
       v-if="open"
-      class="absolute bottom-full mb-2 w-16 bg-b-l-l2 dark:bg-b-d-l10
+      class="absolute mt-2 w-16 bg-b-l-l2 dark:bg-b-d-l10
       shadow-lg rounded-md ring-1 ring-black/10 focus:outline-none z-10"
       role="listbox">
       <li
