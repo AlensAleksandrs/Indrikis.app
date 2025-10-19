@@ -1,4 +1,11 @@
 {
+  "layout": {
+  "public": {
+    "help": "Unterstützung",
+    "privacy-policy": "Datenschutzerklärung",
+    "terms-of-service": "Nutzungsbedingungen"
+    }
+  },
   "home": {
     "title": "Sie greifen derzeit auf src/views/HomeView.vue zu",
     "switch": "Drücken, um das Thema zu wechseln",

@@ -1,4 +1,11 @@
 {
+  "layout": {
+    "public": {
+      "help": "Palīdzība",
+      "privacy-policy": "Privātuma politika",
+      "terms-of-service": "Lietošanas noteikumi"
+    }
+  },
   "home": {
     "title": "Jūs pašlaik piekļūstat src/views/HomeView.vue",
     "switch": "Nospiediet, lai pārslēgtu tēmu",
