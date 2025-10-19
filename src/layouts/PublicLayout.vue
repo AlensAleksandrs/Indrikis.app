@@ -15,7 +15,6 @@ const { t } = useI18n()
     <header class="w-full pt-10 p-4 md:p-12 md:pb-4 flex flex-row justify-between items-end">
       <IndrikisAppLogo/>
       <div class="flex flex-row gap-8">
-        <InternalSite href="/help">{{ t('layout.public.help') }}</InternalSite>
         <ThemeSelect/>
         <LanguageSelect/>
       </div>
@@ -28,6 +27,7 @@ const { t } = useI18n()
         <InternalSite href="/privacy-policy">{{ t('layout.public.privacy-policy') }}</InternalSite>
         <InternalSite href="/terms-of-service">{{ t('layout.public.terms-of-service') }}</InternalSite>
       </div>
+      <InternalSite href="/help">{{ t('layout.public.help') }}</InternalSite>
     </footer>
   </div>
 </template>
