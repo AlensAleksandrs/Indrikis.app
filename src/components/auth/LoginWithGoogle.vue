@@ -7,11 +7,9 @@ const { t } = useI18n()
 
 <template>
   <SecondaryButton>
-    <img src="@/assets/icons/GoogleIcon.svg" class="w-[15px] aspect-square">
+    <img src="@/assets/icons/GoogleIcon.svg" class="w-[15px] aspect-square" />
     {{ t('function.google.login') }}
   </SecondaryButton>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

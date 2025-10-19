@@ -31,6 +31,8 @@
   "devDependencies": {
     "@eslint/js": "^9.22.0",
     "@playwright/test": "^1.51.1",
+    "@typescript-eslint/eslint-plugin": "^8.46.1",
+    "@typescript-eslint/parser": "^8.46.1",
     "@vitest/eslint-plugin": "^1.1.39",
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/test-utils": "^2.4.6",

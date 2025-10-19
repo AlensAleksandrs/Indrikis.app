@@ -1,12 +1,7 @@
-<script setup>
-
-</script>
+<script setup></script>
 
 <template>
-  This is the dashboard layout
-
+  <h1>In progress</h1>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -1,6 +1,6 @@
 import './assets/main.css'
 
-import { createApp, watch } from 'vue'
+import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { i18n } from './i18n'
 
