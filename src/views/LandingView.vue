@@ -15,7 +15,7 @@ const randomKey = available[Math.floor(Math.random() * available.length)]
 
 <template>
   <section class="w-full h-full p-12 flex flex-col items-center justify-center">
-    <img class="w-48 md:w-64 aspect-square bg-gray-200" />
+    <img src="@/assets/illustrations/temp_illustration.png" class="w-48 md:w-64 aspect-square" />
     <h2 class="text-2xl md:text-3xl my-6 font-semibold text-t-l-default dark:text-t-d-l14">
       {{ t('view.landing.welcome') }}
     </h2>

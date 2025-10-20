@@ -37,7 +37,7 @@ onBeforeUnmount(() => {
   <div ref="dropdownRef" class="relative inline-block text-left">
     <button
       type="button"
-      class="flex items-center text-sm font-light text-t-l-default dark:text-t-d-default cursor-pointer hover:text-t-l-l4 hover:dark:text-t-d-l4 hover:underline"
+      class="flex items-center text-sm font-light text-t-l-default dark:text-t-d-default cursor-pointer hover:text-a-l-default hover:dark:text-a-d-d6 hover:underline"
       @click="toggle"
       aria-haspopup="listbox"
       :aria-expanded="open"

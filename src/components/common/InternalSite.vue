@@ -4,7 +4,8 @@ defineProps({ href: { type: String, default: '' } })
 
 <template>
   <RouterLink
-    class="text-xs md:text-sm font-light text-t-l-default dark:text-t-d-default cursor-pointer hover:text-t-l-l4 hover:dark:text-t-d-l4 hover:underline"
+    class="text-xs md:text-sm font-light text-t-l-default dark:text-t-d-default cursor-pointer
+    hover:text-a-l-default hover:dark:text-a-d-default hover:underline"
     :to="href"
   >
     <slot />
