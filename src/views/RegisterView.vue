@@ -1,9 +1,11 @@
 <script setup lang="ts">
+
 import EmailInput from '@/components/auth/EmailInput.vue'
 import PrimaryButton from '@/components/common/PrimaryButton.vue'
 import PasswordInput from '@/components/auth/PasswordInput.vue'
 import ErrorMessage from '@/components/auth/ErrorMessage.vue'
 import InternalSite from '@/components/common/InternalSite.vue'
+import UsernameInput from '@/components/auth/UsernameInput.vue'
 </script>
 
 <template>
@@ -14,13 +16,18 @@ import InternalSite from '@/components/common/InternalSite.vue'
     <div class="flex flex-col md:flex-row gap-4 md:gap-8">
       <div>
         <EmailInput/>
+        <UsernameInput/>
+      </div>
+      <div>
+        <PasswordInput/>
         <PasswordInput/>
       </div>
-      <PasswordInput/>
     </div>
     <PrimaryButton>Reģistrēties</PrimaryButton>
     <InternalSite class="mt-8 underline" href="/forgot-password">Jau esi reģistrēts lietotājs?</InternalSite>
   </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>

@@ -2,7 +2,7 @@
 import { useRoute } from 'vue-router'
 import PublicLayout from '@/layouts/PublicLayout.vue'
 import AuthLayout from '@/layouts/AuthLayout.vue'
-import DashboardLayout from '@/layouts/DashboardLayout.vue'
+import DashboardLayout from '@/layouts/ClientLayout.vue'
 import { useI18n } from 'vue-i18n'
 import { watch } from 'vue'
 
