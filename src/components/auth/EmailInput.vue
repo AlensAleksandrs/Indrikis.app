@@ -24,6 +24,6 @@ function isValidEmail(value: string): boolean {
     :valid="valid"
     @validation="valid = $event"
     :prompt="t('function.form.email.prompt')"
-    LerrorPrompt=" t( 'function.form.email.error-prompt' ) "
+    :errorPrompt=" t('function.form.email.error-prompt') "
   />
 </template>
