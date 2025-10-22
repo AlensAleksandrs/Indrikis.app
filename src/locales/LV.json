@@ -27,7 +27,9 @@
       "info": {
         "default": "Lūdzu aizpildiet pieslēgšanās formu!",
         "action": "Nosūta",
-        "success": "Pieslēgšanās veiksmīga!"
+        "success": "Pieslēgšanās veiksmīga!",
+        "mandatory": "Aizpildiet visus obligātos laukus!"
+
       },
       "form-submit": "Pieslēgties",
       "forgot-password": "Neatceries paroli?"
@@ -35,7 +37,10 @@
     "forgot-password": {
       "title": "Neatceries paroli?",
       "info": {
-        "default": "Lūdzu norādiet savu e-pastu!"
+        "default": "Lūdzu norādiet savu e-pastu!",
+        "action": "Nosūta",
+        "success": "Uz e-pastu nosūtīts ziņojums!",
+        "mandatory": "Aizpildiet visus obligātos laukus!"
       },
       "form-submit": "Atiestatīt",
       "remember-password": "Atcerējies paroli?"

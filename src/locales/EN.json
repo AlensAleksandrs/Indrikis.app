@@ -27,13 +27,20 @@
       "info": {
         "default": "Please fill in the login form!",
         "action": "Sending",
-        "success": "Login successful!"
+        "success": "Login successful!",
+        "mandatory": "Please fill in all mandatory fields!"
       },
       "form-submit": "Log in",
       "forgot-password": "Forgot password?"
     },
     "forgot-password": {
       "title": "Forgot password?",
+      "info": {
+        "default": "Please enter your email!",
+        "action": "Sending",
+        "success": "A message has been sent to your email!",
+        "mandatory": "Please fill in all mandatory fields!"
+      },
       "form-submit": "Reset",
       "remember-password": "Remembered your password?"
     }

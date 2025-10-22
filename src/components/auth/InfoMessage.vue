@@ -2,7 +2,7 @@
 import { ref, watch, onBeforeUnmount, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-type Status = 'idle' | 'working' | 'error' | 'success'
+type Status = 'idle' | 'working' | 'error' | 'success' | 'mandatory'
 
 const props = defineProps<{
   baseKey: string
@@ -47,6 +47,7 @@ const colorClass = computed(() => {
     working: 'text-a-l-default dark:text-a-d-d10',
     success: 'text-a-l-default dark:text-a-d-d10',
     error: 'text-t-error dark:text-t-error',
+    mandatory: 'text-t-warning dark:text-t-warning'
   }
   return props.colorMap?.[props.status] ?? defaults[props.status]
 })
@@ -61,6 +62,8 @@ const text = computed(() => {
       return props.errorText && props.errorText.length
         ? props.errorText
         : (t(`${props.baseKey}.error`, '') as unknown as string)
+    case 'mandatory':
+      return t(`${props.baseKey}.mandatory`)
     default:
       return t(`${props.baseKey}.default`)
   }

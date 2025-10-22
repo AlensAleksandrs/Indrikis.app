@@ -27,13 +27,20 @@
       "info": {
         "default": "Bitte füllen Sie das Anmeldeformular aus!",
         "action": "Sendet",
-        "success": "Anmeldung erfolgreich!"
+        "success": "Anmeldung erfolgreich!",
+        "mandatory": "Bitte füllen Sie alle Pflichtfelder aus!"
       },
       "form-submit": "Anmelden",
       "forgot-password": "Passwort vergessen?"
     },
     "forgot-password": {
       "title": "Passwort vergessen?",
+      "info": {
+        "default": "Bitte geben Sie Ihre E-Mail-Adresse ein!",
+        "action": "Wird gesendet",
+        "success": "Eine Nachricht wurde an Ihre E-Mail-Adresse gesendet!",
+        "mandatory": "Bitte füllen Sie alle Pflichtfelder aus!"
+      },
       "form-submit": "Zurücksetzen",
       "remember-password": "Passwort wiedererkannt?"
     }

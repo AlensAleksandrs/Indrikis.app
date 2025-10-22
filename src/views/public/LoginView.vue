@@ -9,15 +9,52 @@ import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 
-type Status = 'idle' | 'working' | 'error' | 'success'
+type Status = 'idle' | 'working' | 'error' | 'success' | 'mandatory'
 const status = ref < Status > ('idle')
 const errorText = ref < string > ('')
 
-function onSubmit() {
+const email = ref<string>('')
+const password = ref<string>('')
+
+const emailValid = ref<boolean>(false)
+const passwordValid = ref<boolean>(false)
+
+async function fakeLogin(email: string, password: string): Promise<boolean> {
+  return new Promise<boolean>((resolve, reject) => {
+    setTimeout(() => {
+      if (email === 'test@example.com' && password === 'Password123#') {
+        resolve(true)
+      } else {
+        reject(new Error('Invalid credentials'))
+      }
+    }, 1000)
+  })
+}
+
+async function onSubmit() {
   status.value = 'working'
-  setTimeout(() => {
-    status.value = 'success'
-  }, 100)
+  errorText.value = ''
+
+  if (!emailValid.value || !passwordValid.value) {
+    status.value = 'mandatory'
+    errorText.value = ''
+    return
+  }
+
+  try {
+    const success = await fakeLogin(email.value, password.value)
+    if (success) {
+      status.value = 'success'
+    }
+  } catch (err: unknown) {
+    if (err instanceof Error) {
+      status.value = 'error'
+      errorText.value = err.message
+    } else {
+      status.value = 'error'
+      errorText.value = 'Unknown error'
+    }
+  }
 }
 </script>
 
@@ -31,7 +68,6 @@ function onSubmit() {
         class="select-none text-2xl md:text-3xl mb-4 font-semibold text-t-l-default dark:text-t-d-l14">
         {{ t('view.login.title') }}
       </h2>
-
       <InfoMessage
         base-key="view.login.info"
         :status="status"
@@ -40,12 +76,21 @@ function onSubmit() {
           idle: 'text-t-l-default dark:text-t-d-default',
           working: 'text-a-l-default dark:text-a-d-d10',
           success: 'text-a-l-default dark:text-a-d-d10',
-          error: 'text-t-error dark:text-t-error'
+          error: 'text-t-error dark:text-t-error',
+          mandatory: 'text-a-l-d10 dark:text-a-d-default'
         }" />
 
       <div class="flex flex-col gap-6 py-8">
-        <EmailInput />
-        <PasswordInput />
+        <EmailInput
+          v-model="email"
+          :valid="emailValid"
+          @validation="emailValid = $event"
+        />
+        <PasswordInput
+          v-model="password"
+          :valid="passwordValid"
+          @validation="passwordValid = $event"
+        />
       </div>
 
       <PrimaryButton type="submit">{{ t('view.login.form-submit') }}</PrimaryButton>
