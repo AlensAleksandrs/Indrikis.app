@@ -34,6 +34,9 @@
     },
     "forgot-password": {
       "title": "Neatceries paroli?",
+      "info": {
+        "default": "Lūdzu norādiet savu e-pastu!"
+      },
       "form-submit": "Atiestatīt",
       "remember-password": "Atcerējies paroli?"
     }
