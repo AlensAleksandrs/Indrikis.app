@@ -8,6 +8,6 @@ const { t } = useI18n()
 <template>
   <SecondaryButton>
     <img src="@/assets/icons/GoogleIcon.svg" alt="Google" class="w-[15px] h-[15px]" />
-    {{ t('function.google.login') }}
+    {{ t('system.google.login') }}
   </SecondaryButton>
 </template>

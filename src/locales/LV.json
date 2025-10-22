@@ -38,7 +38,7 @@
       "remember-password": "Atcerējies paroli?"
     }
   },
-  "function": {
+  "system": {
     "google": {
       "login": "Pieslēgties ar Google"
     },

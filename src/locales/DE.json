@@ -38,7 +38,7 @@
       "remember-password": "Passwort wiedererkannt?"
     }
   },
-  "function": {
+  "system": {
     "google": {
       "login": "Mit Google anmelden"
     },

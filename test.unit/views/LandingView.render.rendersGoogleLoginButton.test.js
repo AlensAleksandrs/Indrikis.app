@@ -14,9 +14,9 @@ runWithLocales('LandingView.render.rendersGoogleLoginButton', ({ mount, router, 
     const buttons = wrapper.findAll('button')
     expect(buttons.length).toBeGreaterThan(1)
 
-    const googleButton = buttons.find((b) =>
-      b.text().includes(i18n.global.t('function.google.login')),
-    )
+    const expectedLabel = i18n.global.t('system.google.login')
+    const googleButton = buttons.find((b) => b.text().includes(expectedLabel))
+
     expect(googleButton).toBeTruthy()
   })
 })

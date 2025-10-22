@@ -38,7 +38,7 @@
       "remember-password": "Remembered your password?"
     }
   },
-  "function": {
+  "system": {
     "google": {
       "login": "Sign in with Google"
     },
