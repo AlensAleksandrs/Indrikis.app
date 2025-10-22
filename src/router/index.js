@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import LandingView from '@/views/LandingView.vue'
-import LoginView from '@/views/LoginView.vue'
-import PrivacyPolicyView from '@/views/PrivacyPolicyView.vue'
-import DashboardView from '@/views/DashboardView.vue'
-import ForgotPasswordView from '@/views/ForgotPasswordView.vue'
-import TermsOfServiceView from '@/views/TermsOfServiceView.vue'
-import HelpView from '@/views/HelpView.vue'
+import LandingView from '@/views/public/LandingView.vue'
+import LoginView from '@/views/public/LoginView.vue'
+import PrivacyPolicyView from '@/views/public/PrivacyPolicyView.vue'
+import DashboardView from '@/views/client/DashboardView.vue'
+import ForgotPasswordView from '@/views/public/ForgotPasswordView.vue'
+import TermsOfServiceView from '@/views/public/TermsOfServiceView.vue'
+import HelpView from '@/views/public/HelpView.vue'
 
 export const routes = [
   { path: '/', name: 'Landing Page', component: LandingView, meta: { layout: 'public' } },

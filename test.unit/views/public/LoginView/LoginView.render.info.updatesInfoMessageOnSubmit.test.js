@@ -1,6 +1,6 @@
 import { it } from 'vitest'
-import LoginView from '@/views/LoginView.vue'
-import { runWithLocales } from '../test-utils/runWithLocales'
+import LoginView from '@/views/public/LoginView.vue'
+import { runWithLocales } from '../../../test-utils/runWithLocales.ts'
 
 runWithLocales('LoginView.render.info.updatesInfoMessageOnSubmit', ({ mount, router, i18n, messages, expect }) => {
   it('updates the info message to the action state after submit', async () => {

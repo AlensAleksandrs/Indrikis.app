@@ -1,15 +1,8 @@
-import { describe, it, expect } from 'vitest'
-import { mount } from '@vue/test-utils'
-import { createRouter, createWebHistory } from 'vue-router'
-import { i18n } from '@/i18n'
-import LoginView from '@/views/LoginView.vue'
+import { it } from 'vitest'
+import LoginView from '@/views/public/LoginView.vue'
+import { runWithLocales } from '../../../test-utils/runWithLocales.js'
 
-const router = createRouter({
-  history: createWebHistory(),
-  routes: [{ path: '/login', component: LoginView }],
-})
-
-describe('LoginView.render.password.changesIconToWarning', () => {
+runWithLocales('LoginView.render.password.changesIconToWarning', ({ mount, router, i18n, expect }) => {
   it('shows an error icon when the password does not meet rules', async () => {
     router.push('/login')
     await router.isReady()

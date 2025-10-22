@@ -1,15 +1,8 @@
-import { describe, it, expect } from 'vitest'
-import { mount } from '@vue/test-utils'
-import { createRouter, createWebHistory } from 'vue-router'
-import { i18n } from '@/i18n'
-import LoginView from '@/views/LoginView.vue'
+import { it } from 'vitest'
+import LoginView from '@/views/public/LoginView.vue'
+import { runWithLocales } from '../../../test-utils/runWithLocales.js'
 
-const router = createRouter({
-  history: createWebHistory(),
-  routes: [{ path: '/login', component: LoginView }],
-})
-
-describe('LoginView.form.allowsFormSubmit', () => {
+runWithLocales('LoginView.form.allowsFormSubmit', ({ mount, router, i18n, expect }) => {
   it('submits the form when valid credentials are entered', async () => {
     router.push('/login')
     await router.isReady()

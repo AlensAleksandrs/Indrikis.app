@@ -1,6 +1,6 @@
 import { it } from 'vitest'
-import LoginView from '@/views/LoginView.vue'
-import { runWithLocales } from '../test-utils/runWithLocales'
+import LoginView from '@/views/public/LoginView.vue'
+import { runWithLocales } from '../../../test-utils/runWithLocales.ts'
 
 runWithLocales('LoginView.render.password.rendersPasswordWarning', ({ mount, router, i18n, messages, expect }) => {
   it('renders all localized password warnings depending on rule violations', async () => {

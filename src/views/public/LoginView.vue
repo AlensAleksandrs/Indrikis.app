@@ -25,7 +25,7 @@ function onSubmit() {
   <form @submit.prevent="onSubmit">
     <section class="w-full h-full p-6 flex flex-col items-center justify-center">
       <img
-        src="@/assets/illustrations/temp_illustration.png"
+        src="../../assets/illustrations/temp_illustration.png"
         class="select-none w-32 md:w-48 aspect-square" />
       <h2
         class="select-none text-2xl md:text-3xl mb-4 font-semibold text-t-l-default dark:text-t-d-l14">

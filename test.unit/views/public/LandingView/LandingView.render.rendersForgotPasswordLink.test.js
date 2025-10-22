@@ -1,6 +1,6 @@
 import { it } from 'vitest'
-import LandingView from '@/views/LandingView.vue'
-import { runWithLocales } from '../test-utils/runWithLocales'
+import LandingView from '@/views/public/LandingView.vue'
+import { runWithLocales } from '../../../test-utils/runWithLocales.ts'
 
 runWithLocales('LandingView.render.rendersPasswordResetLink', ({ mount, router, i18n, expect }) => {
   it('renders the password reset link with correct label', async () => {

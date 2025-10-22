@@ -1,15 +1,8 @@
-import { describe, it, expect } from 'vitest'
-import { mount } from '@vue/test-utils'
-import { createRouter, createWebHistory } from 'vue-router'
-import { i18n } from '@/i18n'
-import LoginView from '@/views/LoginView.vue'
+import { it } from 'vitest'
+import LoginView from '@/views/public/LoginView.vue'
+import { runWithLocales } from '../../../test-utils/runWithLocales.js'
 
-const router = createRouter({
-  history: createWebHistory(),
-  routes: [{ path: '/login', component: LoginView }],
-})
-
-describe('LoginView.render.password.changesIconToSuccess', () => {
+runWithLocales('LoginView.render.password.changesIconToSuccess', ({ mount, router, i18n, expect }) => {
   it('shows a success icon when a valid password is entered', async () => {
     router.push('/login')
     await router.isReady()

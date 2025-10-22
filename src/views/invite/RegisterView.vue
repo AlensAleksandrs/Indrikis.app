@@ -9,7 +9,7 @@ import UsernameInput from '@/components/auth/UsernameInput.vue'
 
 <template>
   <section class="w-full h-full p-12 flex flex-col items-center justify-center">
-    <img src="@/assets/illustrations/temp_illustration.png" class="w-48 md:w-64 aspect-square" />
+    <img src="../../assets/illustrations/temp_illustration.png" class="w-48 md:w-64 aspect-square" />
     <h2 class="text-2xl md:text-3xl my-6 font-semibold text-t-l-default dark:text-t-d-l14">
       Reģistrēties portālā
     </h2>
