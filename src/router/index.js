@@ -9,13 +9,28 @@ import TermsOfServiceView from '@/views/TermsOfServiceView.vue'
 import HelpView from '@/views/HelpView.vue'
 
 export const routes = [
-  { path: '/', name: 'Landing Page', component: LandingView, meta: {layout: "public"} },
-  { path: '/login', name: 'Login', component: LoginView, meta: {layout: "public"} },
-  { path: '/forgot-password', name: 'Forgot password', component: ForgotPasswordView, meta: {layout: "public"} },
-  { path: '/privacy-policy', name: 'Privacy Policy', component: PrivacyPolicyView, meta: {layout: "public"} },
-  { path: '/terms-of-service', name: 'Terms of Service', component: TermsOfServiceView, meta: {layout: "public"} },
-  { path: '/help', name: 'Assistance', component: HelpView, meta: {layout: "public"} },
-  { path: '/dashboard', name: 'Dashboard', component: DashboardView, meta: {layout: "client"} },
+  { path: '/', name: 'Landing Page', component: LandingView, meta: { layout: 'public' } },
+  { path: '/login', name: 'Login', component: LoginView, meta: { layout: 'public' } },
+  {
+    path: '/forgot-password',
+    name: 'Forgot password',
+    component: ForgotPasswordView,
+    meta: { layout: 'public' },
+  },
+  {
+    path: '/privacy-policy',
+    name: 'Privacy Policy',
+    component: PrivacyPolicyView,
+    meta: { layout: 'public' },
+  },
+  {
+    path: '/terms-of-service',
+    name: 'Terms of Service',
+    component: TermsOfServiceView,
+    meta: { layout: 'public' },
+  },
+  { path: '/help', name: 'Assistance', component: HelpView, meta: { layout: 'public' } },
+  { path: '/dashboard', name: 'Dashboard', component: DashboardView, meta: { layout: 'client' } },
 ]
 
 export function createAppRouter() {

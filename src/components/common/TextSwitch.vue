@@ -21,7 +21,8 @@ function next(): void {
 <template>
   <span
     class="cursor-pointer text-xs font-light text-t-l-default hover:text-a-l-default hover:underline dark:text-t-d-default hover:dark:text-a-d-default md:text-sm"
-    @click="next">
+    @click="next"
+  >
     {{ props.options[index] }}
   </span>
 </template>

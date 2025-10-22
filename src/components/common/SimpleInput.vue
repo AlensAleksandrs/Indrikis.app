@@ -39,16 +39,15 @@ const inputType = computed(() => {
   return props.type ?? 'text'
 })
 
-const inputPadding = computed(() =>
-  props.type === 'password' ? 'pr-16' : 'pr-10'
-)
+const inputPadding = computed(() => (props.type === 'password' ? 'pr-16' : 'pr-10'))
 </script>
 
 <template>
   <div class="relative flex flex-col">
     <label
       :for="id"
-      class="mb-2 select-none text-xs font-light text-t-l-default dark:text-t-d-default md:text-sm">
+      class="mb-2 select-none text-xs font-light text-t-l-default dark:text-t-d-default md:text-sm"
+    >
       {{ label }}
       <span v-if="required" class="text-a-l-d10 dark:text-a-d-d10">*</span>
     </label>
@@ -66,18 +65,21 @@ const inputPadding = computed(() =>
         'outline-none focus:shadow-none focus:ring-0',
         'focus:outline-p-l-default focus:dark:outline-p-d-d10',
         inputPadding,
-        (!props.valid && !!modelValue) && '!border-t-error dark:!border-b-error'
-      ]" />
+        !props.valid && !!modelValue && '!border-t-error dark:!border-b-error',
+      ]"
+    />
 
     <EyeSwitch
       v-if="type === 'password'"
       v-model="eyeState"
-      class="absolute bottom-4 right-10 select-none" />
+      class="absolute bottom-4 right-10 select-none"
+    />
 
     <StateIcon
       :state="valid"
       :defined="!!modelValue"
       :errorPrompt="errorPrompt"
-      class="absolute bottom-4 right-4 select-none" />
+      class="absolute bottom-4 right-4 select-none"
+    />
   </div>
 </template>

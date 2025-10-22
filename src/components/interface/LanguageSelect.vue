@@ -6,7 +6,5 @@ const { availableLocales, locale } = useI18n()
 </script>
 
 <template>
-  <DropdownSelect
-  v-model:selection="locale"
-  :options="availableLocales" />
+  <DropdownSelect v-model:selection="locale" :options="availableLocales" />
 </template>

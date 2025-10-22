@@ -12,23 +12,23 @@ const { t } = useI18n()
 const messages = {
   default: computed(() => ({
     message: t('view.login.info.default'),
-    type: "default",
-    color: "text-t-l-default dark:text-t-d-default"
+    type: 'default',
+    color: 'text-t-l-default dark:text-t-d-default',
   })),
   action: computed(() => ({
     message: t('view.login.info.action'),
-    type: "action",
-    color: "text-a-l-default dark:text-a-d-d10"
+    type: 'action',
+    color: 'text-a-l-default dark:text-a-d-d10',
   })),
   error: computed(() => ({
-    message: "",
-    type: "error",
-    color: "text-t-error dark:text-t-error"
+    message: '',
+    type: 'error',
+    color: 'text-t-error dark:text-t-error',
   })),
   success: computed(() => ({
     message: t('view.login.info.success'),
-    type: "success",
-    color: "text-a-l-default dark:text-a-d-d10"
+    type: 'success',
+    color: 'text-a-l-default dark:text-a-d-d10',
   })),
 }
 
@@ -45,11 +45,15 @@ function onSubmit() {
 <template>
   <form @submit.prevent="onSubmit">
     <section class="w-full h-full p-6 flex flex-col items-center justify-center">
-      <img src="@/assets/illustrations/temp_illustration.png"
-           class="select-none w-32 md:w-48 aspect-square" />
+      <img
+        src="@/assets/illustrations/temp_illustration.png"
+        class="select-none w-32 md:w-48 aspect-square"
+      />
       <h2
-        class="select-none text-2xl md:text-3xl mb-4 font-semibold text-t-l-default dark:text-t-d-l14">
-        {{ t('view.login.title') }} </h2>
+        class="select-none text-2xl md:text-3xl mb-4 font-semibold text-t-l-default dark:text-t-d-l14"
+      >
+        {{ t('view.login.title') }}
+      </h2>
 
       <InfoMessage
         :text="currentMessage.message"

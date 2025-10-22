@@ -1,5 +1,4 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <svg
@@ -8,11 +7,13 @@
     viewBox="0 0 35 35"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    class="text-a-l-d10 dark:text-a-d-d10">
+    class="text-a-l-d10 dark:text-a-d-d10"
+  >
     <g clip-path="url(#clip0)">
       <path
         d="M35 35H0V0H35V35ZM15.6094 20.3135L10.8799 15.7266L8 18.5801L15.6094 26L29 12.8535L26.0996 10L15.6094 20.3135Z"
-        fill="currentColor" />
+        fill="currentColor"
+      />
     </g>
     <defs>
       <clipPath id="clip0">

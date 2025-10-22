@@ -10,13 +10,12 @@ const toggleDark = useToggle(isDark)
 <template>
   <button
     @click="toggleDark()"
-    class="relative flex h-6 w-12 items-center rounded-full bg-b-l-d8 dark:bg-b-d-l6">
+    class="relative flex h-6 w-12 items-center rounded-full bg-b-l-d8 dark:bg-b-d-l6"
+  >
     <span
-      class="absolute z-10 flex h-6 w-6 items-center justify-center rounded-full bg-a-l-d8 transition-transform duration-500 ease-in-out dark:translate-x-6 dark:bg-a-d-d12">
-      <img
-        :src="isDark ? MoonIcon : SunIcon"
-        alt="theme icon"
-        class="h-4 w-4 invert-[1]" />
+      class="absolute z-10 flex h-6 w-6 items-center justify-center rounded-full bg-a-l-d8 transition-transform duration-500 ease-in-out dark:translate-x-6 dark:bg-a-d-d12"
+    >
+      <img :src="isDark ? MoonIcon : SunIcon" alt="theme icon" class="h-4 w-4 invert-[1]" />
     </span>
     <span class="absolute left-1">
       <img :src="SunIcon" alt="sun icon" class="h-4 w-4 invert-[1]" />

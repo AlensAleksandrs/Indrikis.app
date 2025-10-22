@@ -20,7 +20,7 @@ watch(
       dots.value = ''
     }
   },
-  { immediate: true }
+  { immediate: true },
 )
 
 function startDots(): void {
@@ -46,7 +46,8 @@ onBeforeUnmount(stopDots)
 <template>
   <h1
     class="select-none text-xs md:text-sm font-light transition-colors duration-300"
-    :class="color">
+    :class="color"
+  >
     {{ text }}<span v-if="type === 'action'">{{ dots }}</span>
   </h1>
 </template>

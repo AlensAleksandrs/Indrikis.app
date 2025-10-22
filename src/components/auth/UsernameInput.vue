@@ -1,11 +1,5 @@
-<script setup lang="ts">
+<script setup lang="ts"></script>
 
-</script>
+<template>In progress</template>
 
-<template>
-  In progress
-</template>
-
-<style scoped>
-
-</style>
+<style scoped></style>

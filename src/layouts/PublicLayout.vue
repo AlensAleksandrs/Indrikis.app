@@ -14,9 +14,11 @@ const { t } = useI18n()
 
 <template>
   <div
-    class="flex h-screen w-screen max-w-[1250px] flex-col overflow-scroll bg-b-l-default shadow-md dark:bg-b-d-l8">
+    class="flex h-screen w-screen max-w-[1250px] flex-col overflow-scroll bg-b-l-default shadow-md dark:bg-b-d-l8"
+  >
     <header
-      class="flex w-full flex-row items-end justify-between p-4 pt-10 md:p-12 md:pb-4 cursor-pointer">
+      class="flex w-full flex-row items-end justify-between p-4 pt-10 md:p-12 md:pb-4 cursor-pointer"
+    >
       <IndrikisAppLogo @click="router.push('/')" class="cursor-pointer" />
       <div class="flex flex-row gap-8">
         <ThemeSelect />
@@ -28,8 +30,7 @@ const { t } = useI18n()
       <RouterView />
     </main>
 
-    <footer
-      class="flex w-full flex-row items-start justify-between p-4 pb-6 md:px-12 md:pt-4">
+    <footer class="flex w-full flex-row items-start justify-between p-4 pb-6 md:px-12 md:pt-4">
       <div class="flex flex-row gap-4 md:gap-8">
         <InternalSite href="/privacy-policy">
           {{ t('layout.public.privacy-policy') }}

@@ -1,5 +1,4 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <svg
@@ -8,7 +7,8 @@
     viewBox="0 0 35 35"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    class="text-b-l-d16 dark:text-b-d-l16">
+    class="text-b-l-d16 dark:text-b-d-l16"
+  >
     <path
       fill="currentColor"
       fill-rule="evenodd"
@@ -38,7 +38,8 @@
         C29.433 21 31 19.433 31 17.5
         C31 15.567 29.433 14 27.5 14
         Z
-      " />
+      "
+    />
     <defs>
       <clipPath id="clip0">
         <rect width="35" height="35" rx="17.5" fill="currentColor" />

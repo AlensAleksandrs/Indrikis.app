@@ -18,11 +18,12 @@ function isValidEmail(value: string): boolean {
     v-model="email"
     id="email"
     type="email"
-    :label=" t( 'function.form.email.label' ) "
+    :label="t('function.form.email.label')"
     required
     :validator="isValidEmail"
     :valid="valid"
     @validation="valid = $event"
-    :prompt=" t( 'function.form.email.prompt' ) "
-    LerrorPrompt=" t( 'function.form.email.error-prompt' ) " />
+    :prompt="t('function.form.email.prompt')"
+    LerrorPrompt=" t( 'function.form.email.error-prompt' ) "
+  />
 </template>
