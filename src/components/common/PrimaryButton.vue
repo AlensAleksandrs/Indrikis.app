@@ -7,11 +7,9 @@ defineProps<{
 
 <template>
   <button
-    :type="type || 'button'" class="select-none w-56 md:w-64 h-10 rounded-xl bg-p-l-default dark:bg-p-d-d12 cursor-pointer hover:bg-p-l-l2 hover:dark:bg-p-d-d14 text-b-l-default dark:text-b-l-default font-regular text-sm flex items-center justify-center gap-2"
-    @click="action && action()"
-  >
+    :type="type ?? 'button'"
+    class="flex h-10 w-56 select-none items-center justify-center gap-2 rounded-xl bg-p-l-default text-sm font-normal text-b-l-default hover:bg-p-l-l2 dark:bg-p-d-d12 dark:text-b-l-default hover:dark:bg-p-d-d14 md:w-64"
+    @click="action?.()">
     <slot />
   </button>
 </template>
-
-<style scoped></style>

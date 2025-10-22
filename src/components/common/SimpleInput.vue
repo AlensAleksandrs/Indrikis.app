@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import { ref, computed } from 'vue'
 import StateIcon from '@/components/auth/StateIcon.vue'
 import EyeSwitch from '@/components/icons/EyeSwitch.vue'
-import { ref, computed } from 'vue'
 
 const props = defineProps<{
   modelValue: string
@@ -23,7 +23,7 @@ const emit = defineEmits<{
 
 const eyeState = ref(false)
 
-function onInput(event: Event) {
+function onInput(event: Event): void {
   const value = (event.target as HTMLInputElement).value
   emit('update:modelValue', value)
   if (props.validator) {
@@ -36,20 +36,19 @@ const inputType = computed(() => {
   if (props.type === 'password') {
     return eyeState.value ? 'text' : 'password'
   }
-  return props.type || 'text'
+  return props.type ?? 'text'
 })
 
-const inputPadding = computed(() => {
-  return props.type === 'password' ? 'pr-16' : 'pr-10'
-})
+const inputPadding = computed(() =>
+  props.type === 'password' ? 'pr-16' : 'pr-10'
+)
 </script>
 
 <template>
   <div class="relative flex flex-col">
     <label
       :for="id"
-      class="select-none mb-2 text-xs md:text-sm font-light text-t-l-default dark:text-t-d-default"
-    >
+      class="mb-2 select-none text-xs font-light text-t-l-default dark:text-t-d-default md:text-sm">
       {{ label }}
       <span v-if="required" class="text-a-l-d10 dark:text-a-d-d10">*</span>
     </label>
@@ -61,27 +60,24 @@ const inputPadding = computed(() => {
       :placeholder="prompt"
       @input="onInput"
       :class="[
-        'select-none w-56 md:w-64 h-12 rounded-xl px-4 text-sm',
-        'bg-b-l-d8 dark:bg-b-d-l10 text-t-l-d10 dark:text-t-d-default',
-        'border border-b-l-d8 dark:border-b-d-l10',
-        'outline-none focus:ring-0 focus:shadow-none',
+        'h-12 w-56 select-none rounded-xl border px-4 text-sm md:w-64',
+        'bg-b-l-d8 text-t-l-d10 border-b-l-d8',
+        'dark:bg-b-d-l10 dark:text-t-d-default dark:border-b-d-l10',
+        'outline-none focus:shadow-none focus:ring-0',
         'focus:outline-p-l-default focus:dark:outline-p-d-d10',
         inputPadding,
         (!props.valid && !!modelValue) && '!border-t-error dark:!border-b-error'
-      ]"
-    />
+      ]" />
 
     <EyeSwitch
       v-if="type === 'password'"
       v-model="eyeState"
-      class="select-none absolute right-10 bottom-4"
-    />
+      class="absolute bottom-4 right-10 select-none" />
 
     <StateIcon
       :state="valid"
       :defined="!!modelValue"
       :errorPrompt="errorPrompt"
-      class="select-none absolute right-4 bottom-4"
-    />
+      class="absolute bottom-4 right-4 select-none" />
   </div>
 </template>

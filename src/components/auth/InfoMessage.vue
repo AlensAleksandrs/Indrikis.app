@@ -23,7 +23,7 @@ watch(
   { immediate: true }
 )
 
-function startDots() {
+function startDots(): void {
   stopDots()
   const states = ['.', '..', '...']
   let i = 0
@@ -33,8 +33,8 @@ function startDots() {
   }, 400)
 }
 
-function stopDots() {
-  if (interval) {
+function stopDots(): void {
+  if (interval !== null) {
     clearInterval(interval)
     interval = null
   }
@@ -46,8 +46,7 @@ onBeforeUnmount(stopDots)
 <template>
   <h1
     class="select-none text-xs md:text-sm font-light transition-colors duration-300"
-    :class="color"
-  >
+    :class="color">
     {{ text }}<span v-if="type === 'action'">{{ dots }}</span>
   </h1>
 </template>

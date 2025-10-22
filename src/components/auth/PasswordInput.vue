@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import SimpleInput from '@/components/common/SimpleInput.vue'
 import { ref, computed } from 'vue'
+import SimpleInput from '@/components/common/SimpleInput.vue'
 
-const password = ref('')
-const valid = ref(false)
+const password = ref<string>('')
+const valid = ref<boolean>(false)
 
 type Rule = {
-  test: (val: string) => boolean
+  test: (value: string) => boolean
   message: string
 }
 
@@ -16,7 +16,7 @@ const rules: Rule[] = [
   { test: (v) => /[^A-Za-z0-9]/.test(v), message: 'Parolei jāietver vismaz viens speciālais simbols' },
 ]
 
-const currentError = computed(() => {
+const currentError = computed<string>(() => {
   for (const rule of rules) {
     if (!rule.test(password.value)) {
       return rule.message
@@ -25,8 +25,8 @@ const currentError = computed(() => {
   return ''
 })
 
-const isValidPassword = (val: string): boolean => {
-  return rules.every((rule) => rule.test(val))
+function isValidPassword(value: string): boolean {
+  return rules.every((rule) => rule.test(value))
 }
 </script>
 
@@ -36,11 +36,10 @@ const isValidPassword = (val: string): boolean => {
     id="password"
     type="password"
     label="Parole"
-    :required="true"
+    required
     :validator="isValidPassword"
     :valid="valid"
     @validation="valid = $event"
     prompt="Ievadi savu paroli"
-    :errorPrompt="currentError"
-  />
+    :errorPrompt="currentError" />
 </template>

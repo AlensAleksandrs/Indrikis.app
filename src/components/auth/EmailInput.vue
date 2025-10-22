@@ -1,12 +1,13 @@
 <script setup lang="ts">
-import SimpleInput from '@/components/common/SimpleInput.vue'
 import { ref } from 'vue'
+import SimpleInput from '@/components/common/SimpleInput.vue'
 
-const email = ref('')
-const valid = ref(false)
+const email = ref<string>('')
+const valid = ref<boolean>(false)
 
-const isValidEmail = (val: string): boolean =>
-  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)
+function isValidEmail(value: string): boolean {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
+}
 </script>
 
 <template>
@@ -15,11 +16,10 @@ const isValidEmail = (val: string): boolean =>
     id="email"
     type="email"
     label="E-pasta adrese"
-    :required="true"
+    required
     :validator="isValidEmail"
     :valid="valid"
     @validation="valid = $event"
     prompt="Ievadi savu e-pasta adresi"
-    errorPrompt="Ievadītā e-pasta adrese nav pareiza!"
-  />
+    errorPrompt="Ievadītā e-pasta adrese nav pareiza!" />
 </template>

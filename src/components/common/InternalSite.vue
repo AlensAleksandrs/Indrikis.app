@@ -1,14 +1,13 @@
-<script setup>
-defineProps({ href: { type: String, default: '' } })
+<script setup lang="ts">
+defineProps<{
+  href?: string
+}>()
 </script>
 
 <template>
   <RouterLink
-    class="text-xs select-none md:text-sm font-light text-t-l-default dark:text-t-d-default cursor-pointer hover:text-a-l-default hover:dark:text-a-d-default hover:underline"
-    :to="href"
-  >
+    :to="href ?? ''"
+    class="cursor-pointer select-none text-xs font-light text-t-l-default hover:text-a-l-default hover:underline dark:text-t-d-default hover:dark:text-a-d-default md:text-sm">
     <slot />
   </RouterLink>
 </template>
-
-<style scoped></style>

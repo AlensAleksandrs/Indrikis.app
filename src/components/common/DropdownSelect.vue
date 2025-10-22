@@ -1,25 +1,29 @@
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 
-defineProps({
-  selection: { type: String, default: 'ABC' },
-  options: { type: Array, default: () => ['ABC', 'DEF', 'GHI'] },
-})
+const props = defineProps<{
+  selection?: string
+  options?: string[]
+}>()
 
-const emit = defineEmits(['update:selection'])
+const emit = defineEmits<{
+  (e: 'update:selection', value: string): void
+}>()
+
 const open = ref(false)
 const dropdownRef = ref<HTMLElement | null>(null)
 
-function toggle() {
+function toggle(): void {
   open.value = !open.value
 }
 
-function selectOption(option) {
+function selectOption(option: string): void {
   emit('update:selection', option)
   open.value = false
 }
-function handleClickOutside(e: MouseEvent) {
-  if (dropdownRef.value && !dropdownRef.value.contains(e.target as Node)) {
+
+function handleClickOutside(event: MouseEvent): void {
+  if (dropdownRef.value && !dropdownRef.value.contains(event.target as Node)) {
     open.value = false
   }
 }
@@ -37,32 +41,27 @@ onBeforeUnmount(() => {
   <div ref="dropdownRef" class="relative inline-block text-left">
     <button
       type="button"
-      class="flex items-center text-sm font-light text-t-l-default dark:text-t-d-default cursor-pointer hover:text-a-l-default hover:dark:text-a-d-d6 hover:underline"
+      class="flex cursor-pointer items-center text-sm font-light text-t-l-default hover:text-a-l-default hover:underline dark:text-t-d-default hover:dark:text-a-d-d6"
       @click="toggle"
       aria-haspopup="listbox"
-      :aria-expanded="open"
-    >
-      {{ selection }}
+      :aria-expanded="open">
+      {{ props.selection ?? 'ABC' }}
       <span class="ml-1">⏷</span>
     </button>
 
     <ul
       v-if="open"
-      class="absolute mt-2 w-16 bg-b-l-l2 dark:bg-b-d-l10 shadow-lg rounded-md ring-1 ring-black/10 focus:outline-none z-10"
-      role="listbox"
-    >
+      class="absolute z-10 mt-2 w-16 rounded-md bg-b-l-l2 shadow-lg ring-1 ring-black/10 focus:outline-none dark:bg-b-d-l10"
+      role="listbox">
       <li
-        v-for="option in options"
+        v-for="option in props.options ?? ['ABC', 'DEF', 'GHI']"
         :key="option"
         role="option"
-        :aria-selected="option === selection"
-        class="cursor-pointer px-3 py-2 text-sm rounded-md hover:bg-b-l-default dark:hover:bg-b-d-l12 text-t-l-default hover:text-t-l-d8 dark:text-t-d-default dark:hover:text-t-d-l12"
-        @click="selectOption(option)"
-      >
+        :aria-selected="option === props.selection"
+        class="cursor-pointer rounded-md px-3 py-2 text-sm text-t-l-default hover:bg-b-l-default hover:text-t-l-d8 dark:text-t-d-default dark:hover:bg-b-d-l12 dark:hover:text-t-d-l12"
+        @click="selectOption(option)">
         {{ option }}
       </li>
     </ul>
   </div>
 </template>
-
-<style scoped></style>
