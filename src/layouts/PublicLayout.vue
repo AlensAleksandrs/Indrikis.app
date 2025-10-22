@@ -5,6 +5,9 @@ import LanguageSelect from '@/components/interface/LanguageSelect.vue'
 import ThemeSelect from '@/components/interface/ThemeSelect.vue'
 import { useDark } from '@vueuse/core'
 import { useI18n } from 'vue-i18n'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 useDark()
 const { t } = useI18n()
@@ -13,8 +16,8 @@ const { t } = useI18n()
 <template>
   <div
     class="max-w-[1250px] w-screen h-screen overflow-scroll flex flex-col bg-b-l-default dark:bg-b-d-l8 shadow-md">
-    <header class="w-full pt-10 p-4 md:p-12 md:pb-4 flex flex-row justify-between items-end">
-      <IndrikisAppLogo />
+    <header class="cursor-pointer w-full pt-10 p-4 md:p-12 md:pb-4 flex flex-row justify-between items-end">
+      <IndrikisAppLogo @click="router.push('/')" class="cursor-pointer" />
       <div class="flex flex-row gap-8">
         <ThemeSelect />
         <LanguageSelect />

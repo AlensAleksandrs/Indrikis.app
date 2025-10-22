@@ -3,7 +3,7 @@
 import EmailInput from '@/components/auth/EmailInput.vue'
 import PrimaryButton from '@/components/common/PrimaryButton.vue'
 import PasswordInput from '@/components/auth/PasswordInput.vue'
-import ErrorMessage from '@/components/auth/ErrorMessage.vue'
+import ErrorMessage from '@/components/auth/InfoMessage.vue'
 import InternalSite from '@/components/common/InternalSite.vue'
 import UsernameInput from '@/components/auth/UsernameInput.vue'
 </script>

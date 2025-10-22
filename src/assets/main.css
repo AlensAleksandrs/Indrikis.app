@@ -13,6 +13,10 @@
 @theme {
   --font-sans: figtree, ui-sans-serif, system-ui;
 
+  /* System */
+  --color-t-error: #D63838;
+  --color-b-error: #B73333;
+
   /* Text (light) */
   --color-t-l-default: #181e2d;
   --color-t-l-d2: #151b28;
@@ -129,6 +133,9 @@
   --color-b-d-l12: #242424;
   --color-b-d-l14: #292929;
   --color-b-d-l16: #2e2e2e;
+  --color-b-d-l18: #333334;
+  --color-b-d-l20: #383838;
+  --color-b-d-l22: #3D3D3D;
 
   /* Primary (dark) */
   --color-p-d-default: #6981d8;

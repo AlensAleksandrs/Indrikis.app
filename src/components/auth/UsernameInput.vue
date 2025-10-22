@@ -1,9 +1,10 @@
 <script setup lang="ts">
 
+import TextInput from '@/components/common/SimpleInput.vue'
 </script>
 
 <template>
-  <h1>In progress</h1>
+  <TextInput/>
 </template>
 
 <style scoped>
