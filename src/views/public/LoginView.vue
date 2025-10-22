@@ -10,8 +10,8 @@ import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
 
 type Status = 'idle' | 'working' | 'error' | 'success' | 'mandatory'
-const status = ref < Status > ('idle')
-const errorText = ref < string > ('')
+const status = ref<Status>('idle')
+const errorText = ref<string>('')
 
 const email = ref<string>('')
 const password = ref<string>('')
@@ -63,9 +63,11 @@ async function onSubmit() {
     <section class="w-full h-full p-6 flex flex-col items-center justify-center">
       <img
         src="../../assets/illustrations/temp_illustration.png"
-        class="select-none w-32 md:w-48 aspect-square" />
+        class="select-none w-32 md:w-48 aspect-square"
+      />
       <h2
-        class="select-none text-2xl md:text-3xl mb-4 font-semibold text-t-l-default dark:text-t-d-l14">
+        class="select-none text-2xl md:text-3xl mb-4 font-semibold text-t-l-default dark:text-t-d-l14"
+      >
         {{ t('view.login.title') }}
       </h2>
       <InfoMessage
@@ -77,15 +79,12 @@ async function onSubmit() {
           working: 'text-a-l-default dark:text-a-d-d10',
           success: 'text-a-l-default dark:text-a-d-d10',
           error: 'text-t-error dark:text-t-error',
-          mandatory: 'text-a-l-d10 dark:text-a-d-default'
-        }" />
+          mandatory: 'text-a-l-d10 dark:text-a-d-default',
+        }"
+      />
 
       <div class="flex flex-col gap-6 py-8">
-        <EmailInput
-          v-model="email"
-          :valid="emailValid"
-          @validation="emailValid = $event"
-        />
+        <EmailInput v-model="email" :valid="emailValid" @validation="emailValid = $event" />
         <PasswordInput
           v-model="password"
           :valid="passwordValid"

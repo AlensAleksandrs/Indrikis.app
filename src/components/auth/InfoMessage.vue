@@ -20,9 +20,12 @@ watch(
   () => props.status,
   (newStatus) => {
     if (newStatus === 'working') startDots()
-    else { stopDots(); dots.value = '' }
+    else {
+      stopDots()
+      dots.value = ''
+    }
   },
-  { immediate: true }
+  { immediate: true },
 )
 
 function startDots(): void {
@@ -36,7 +39,10 @@ function startDots(): void {
 }
 
 function stopDots(): void {
-  if (interval !== null) { clearInterval(interval); interval = null }
+  if (interval !== null) {
+    clearInterval(interval)
+    interval = null
+  }
 }
 
 onBeforeUnmount(stopDots)
@@ -47,7 +53,7 @@ const colorClass = computed(() => {
     working: 'text-a-l-default dark:text-a-d-d10',
     success: 'text-a-l-default dark:text-a-d-d10',
     error: 'text-t-error dark:text-t-error',
-    mandatory: 'text-t-warning dark:text-t-warning'
+    mandatory: 'text-t-warning dark:text-t-warning',
   }
   return props.colorMap?.[props.status] ?? defaults[props.status]
 })
@@ -73,7 +79,8 @@ const text = computed(() => {
 <template>
   <h1
     class="select-none text-xs md:text-sm font-light transition-colors duration-300"
-    :class="colorClass">
+    :class="colorClass"
+  >
     {{ text }}<span v-if="status === 'working'">{{ dots }}</span>
   </h1>
 </template>

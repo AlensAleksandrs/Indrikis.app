@@ -29,7 +29,6 @@
         "action": "Nosūta",
         "success": "Pieslēgšanās veiksmīga!",
         "mandatory": "Aizpildiet visus obligātos laukus!"
-
       },
       "form-submit": "Pieslēgties",
       "forgot-password": "Neatceries paroli?"

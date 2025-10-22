@@ -1,27 +1,47 @@
 import { it } from 'vitest'
+import { nextTick } from 'vue'
 import LoginView from '@/views/public/LoginView.vue'
 import { runWithLocales } from '../../../test-utils/runWithLocales.ts'
 
-runWithLocales('LoginView.render.info.updatesInfoMessageOnSubmit', ({ mount, router, i18n, messages, expect }) => {
-  it('updates the info message to the action state after submit', async () => {
-    router.push('/login')
-    await router.isReady()
+runWithLocales(
+  'LoginView.render.info.updatesInfoMessageOnSubmit',
+  ({ mount, router, i18n, messages, expect }) => {
+    it('shows mandatory message if required fields are empty', async () => {
+      router.push('/login')
+      await router.isReady()
 
-    const wrapper = mount(LoginView, {
-      global: { plugins: [router, i18n] },
+      const wrapper = mount(LoginView, {
+        global: { plugins: [router, i18n] },
+      })
+
+      const form = wrapper.find('form')
+      await form.trigger('submit.prevent')
+      await nextTick()
+
+      const expectedInfo = messages?.view?.login?.info?.mandatory
+      expect(wrapper.text()).toContain(expectedInfo)
     })
 
-    const emailInput = wrapper.find('input[type="email"]')
-    const passwordInput = wrapper.find('input[type="password"]')
-    const form = wrapper.find('form')
+    it('updates the info message to the action state after submit when fields are valid', async () => {
+      router.push('/login')
+      await router.isReady()
 
-    await emailInput.setValue('test@example.com')
-    await passwordInput.setValue('password123')
+      const wrapper = mount(LoginView, {
+        global: { plugins: [router, i18n] },
+      })
 
-    await form.trigger('submit.prevent')
-    await wrapper.vm.$nextTick()
+      const emailInput = wrapper.find('input[type="email"]')
+      const passwordInput = wrapper.find('input[type="password"]')
+      const form = wrapper.find('form')
 
-    const expectedInfo = messages?.view?.login?.info?.action
-    expect(wrapper.text()).toContain(expectedInfo)
-  })
-})
+      await emailInput.setValue('test@example.com')
+      await passwordInput.setValue('Password123#')
+
+      await form.trigger('submit.prevent')
+      await nextTick()
+
+      const expectedInfo = messages?.view?.login?.info?.action
+      expect(wrapper.text()).toContain(expectedInfo)
+    })
+  },
+)

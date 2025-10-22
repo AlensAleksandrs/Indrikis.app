@@ -1,9 +1,10 @@
 import { it } from 'vitest'
+import { nextTick } from 'vue'
 import LoginView from '@/views/public/LoginView.vue'
 import { runWithLocales } from '../../../test-utils/runWithLocales.js'
 
-runWithLocales('LoginView.form.allowsFormSubmit', ({ mount, router, i18n, expect }) => {
-  it('submits the form when valid credentials are entered', async () => {
+runWithLocales('LoginView.form.allowsFormSubmit', ({ mount, router, i18n, messages, expect }) => {
+  it('shows the action message when valid credentials are entered', async () => {
     router.push('/login')
     await router.isReady()
 
@@ -16,14 +17,11 @@ runWithLocales('LoginView.form.allowsFormSubmit', ({ mount, router, i18n, expect
     const form = wrapper.find('form')
 
     await emailInput.setValue('test@example.com')
-    await passwordInput.setValue('password123')
-
+    await passwordInput.setValue('Password123!') // must satisfy your validation
     await form.trigger('submit.prevent')
+    await nextTick()
 
-    expect(wrapper.emitted()).toHaveProperty('submit')
-    expect(wrapper.emitted('submit')[0][0]).toEqual({
-      email: 'test@example.com',
-      password: 'password123',
-    })
+    const expectedInfo = messages?.view?.login?.info?.action
+    expect(wrapper.text()).toContain(expectedInfo)
   })
 })

@@ -75,8 +75,9 @@ async function onSubmit() {
           working: 'text-a-l-default dark:text-a-d-d10',
           success: 'text-a-l-default dark:text-a-d-d10',
           error: 'text-t-error dark:text-t-error',
-          mandatory: 'text-a-l-d10 dark:text-a-d-default'
-        }" />
+          mandatory: 'text-a-l-d10 dark:text-a-d-default',
+        }"
+      />
 
       <EmailInput
         v-model="email"
