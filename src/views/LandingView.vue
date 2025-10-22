@@ -15,7 +15,7 @@ const randomKey = available[Math.floor(Math.random() * available.length)]
 <template>
   <section class="w-full h-full p-6 flex flex-col items-center justify-center">
     <img src="@/assets/illustrations/temp_illustration.png" class="w-32 md:w-48 aspect-square" />
-    <h2 class="text-2xl md:text-3xl mb-4 font-semibold text-t-l-default dark:text-t-d-l14">{{ t('view.landing.welcome') }}</h2>
+    <h2 class="text-2xl md:text-3xl mb-4 font-semibold text-t-l-default dark:text-t-d-l14">{{ t('view.landing.title') }}</h2>
     <p
       class="text-xs md:text-sm max-w-[280px] text-center font-light text-t-l-default dark:text-t-d-default">
       {{ t(`view.landing.quotes.${randomKey}`) }}

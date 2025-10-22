@@ -16,7 +16,7 @@ runWithLocales(
           global: { plugins: [router, i18n] },
         })
 
-        const expected = i18n.global.t('view.landing.welcome')
+        const expected = i18n.global.t('view.landing.title')
         expect(wrapper.text()).toContain(expected)
       }
     })

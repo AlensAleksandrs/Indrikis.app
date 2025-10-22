@@ -1,17 +1,17 @@
 {
   "layout": {
     "public": {
-      "help": "Assistance",
+      "help": "Help",
       "privacy-policy": "Privacy Policy",
       "terms-of-service": "Terms of Service"
     }
   },
   "view": {
     "landing": {
-      "welcome": "Welcome back!",
+      "title": "Welcome back!",
       "quotes": {
-        "1": "If you believe it will work, you'll see opportunities. If you believe it won't, you will see obstacles",
-        "2": "The best way to get started is to quit talking and begin doing",
+        "1": "If you believe it will work, you’ll see opportunities. If you believe it won’t, you’ll see obstacles",
+        "2": "The best way to get started is to stop talking and start doing",
         "3": "Don’t watch the clock; do what it does. Keep going"
       },
       "authors": {
@@ -19,18 +19,44 @@
         "2": "Walt Disney",
         "3": "Sam Levenson"
       },
-      "login": "Login",
+      "login": "Log in",
       "forgot-password": "Forgot password?"
+    },
+    "login": {
+      "title": "Log in to the portal",
+      "info": {
+        "default": "Please fill in the login form!",
+        "action": "Sending",
+        "success": "Login successful!"
+      },
+      "form-submit": "Log in",
+      "forgot-password": "Forgot password?"
+    },
+    "forgot-password": {
+      "title": "Forgot password?",
+      "form-submit": "Reset",
+      "remember-password": "Remembered your password?"
     }
   },
   "function": {
     "google": {
-      "login": "Login with Google"
+      "login": "Sign in with Google"
+    },
+    "form": {
+      "email": {
+        "label": "Email address",
+        "prompt": "Enter your email address",
+        "error-prompt": "The entered email address is not correct!"
+      },
+      "password": {
+        "label": "Password",
+        "prompt": "Enter your password",
+        "rules": {
+          "min-length": "Password must be at least 8 characters long",
+          "capital-letter": "Password must contain at least one uppercase letter",
+          "special-symbol": "Password must contain at least one special character"
+        }
+      }
     }
-  },
-  "home": {
-    "title": "You are currently accessing src/views/HomeView.vue",
-    "switch": "Press to switch theme",
-    "status": "Dark mode: {status}"
   }
 }

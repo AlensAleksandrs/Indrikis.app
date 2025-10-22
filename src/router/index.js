@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import HomeView from '../views/HomeView.vue'
 import LandingView from '@/views/LandingView.vue'
 import LoginView from '@/views/LoginView.vue'
 import PrivacyPolicyView from '@/views/PrivacyPolicyView.vue'
@@ -10,7 +9,6 @@ import TermsOfServiceView from '@/views/TermsOfServiceView.vue'
 import HelpView from '@/views/HelpView.vue'
 
 export const routes = [
-  { path: '/test', name: 'test', component: HomeView, meta: {layout: "public"} },
   { path: '/', name: 'Landing Page', component: LandingView, meta: {layout: "public"} },
   { path: '/login', name: 'Login', component: LoginView, meta: {layout: "public"} },
   { path: '/forgot-password', name: 'Forgot password', component: ForgotPasswordView, meta: {layout: "public"} },

@@ -8,7 +8,7 @@
   },
   "view": {
     "landing": {
-      "welcome": "Laipni lūgti atpakaļ!",
+      "title": "Laipni lūgti atpakaļ!",
       "quotes": {
         "1": "Ja tu tici, ka tas izdosies, tu redzēsi iespējas. Ja tu tici, ka neizdosies, tu redzēsi šķēršļus",
         "2": "Labākais veids, kā sākt, ir pārtraukt runāt un sākt darīt",
@@ -21,16 +21,42 @@
       },
       "login": "Pieslēgties",
       "forgot-password": "Neatceries paroli?"
+    },
+    "login": {
+      "title": "Pieslēgties portālam",
+      "info": {
+        "default": "Lūdzu aizpildiet pieslēgšanās formu!",
+        "action": "Nosūta",
+        "success": "Pieslēgšanās veiksmīga!"
+      },
+      "form-submit": "Pieslēgties",
+      "forgot-password": "Neatceries paroli?"
+    },
+    "forgot-password": {
+      "title": "Neatceries paroli?",
+      "form-submit": "Atiestatīt",
+      "remember-password": "Atcerējies paroli?"
     }
   },
   "function": {
     "google": {
       "login": "Pieslēgties ar Google"
+    },
+    "form": {
+      "email": {
+        "label": "E-pasta adrese",
+        "prompt": "Ievadi savu e-pasta adresi",
+        "error-prompt": "Ievadītā e-pasta adrese nav pareiza!"
+      },
+      "password": {
+        "label": "Parole",
+        "prompt": "Ievadi savu paroli",
+        "rules": {
+          "min-length": "Parolei jābūt vismaz 8 rakstzīmēm garai",
+          "capital-letter": "Parolei jāietver vismaz viena lielā rakstzīme",
+          "special-symbol": "Parolei jāietver vismaz viens speciālais simbols"
+        }
+      }
     }
-  },
-  "home": {
-    "title": "Jūs pašlaik piekļūstat src/views/HomeView.vue",
-    "switch": "Nospiediet, lai pārslēgtu tēmu",
-    "status": "Tumšais režīms: {status}"
   }
 }

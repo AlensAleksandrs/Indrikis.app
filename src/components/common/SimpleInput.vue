@@ -60,7 +60,7 @@ const inputPadding = computed(() =>
       :placeholder="prompt"
       @input="onInput"
       :class="[
-        'h-12 w-56 select-none rounded-xl border px-4 text-sm md:w-64',
+        'h-12 w-56 select-none rounded-xl border px-4 text-xs md:w-64',
         'bg-b-l-d8 text-t-l-d10 border-b-l-d8',
         'dark:bg-b-d-l10 dark:text-t-d-default dark:border-b-d-l10',
         'outline-none focus:shadow-none focus:ring-0',
