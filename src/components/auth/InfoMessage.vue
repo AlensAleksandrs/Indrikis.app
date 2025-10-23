@@ -78,7 +78,7 @@ const text = computed(() => {
 
 <template>
   <h1
-    class="select-none text-xs md:text-sm font-light transition-colors duration-300"
+    class="select-none text-xs md:text-sm font-normal transition-colors duration-300"
     :class="colorClass"
   >
     {{ text }}<span v-if="status === 'working'">{{ dots }}</span>

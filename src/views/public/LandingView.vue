@@ -17,18 +17,18 @@ const randomKey = available[Math.floor(Math.random() * available.length)]
   <section class="w-full h-full p-6 flex flex-col items-center justify-center">
     <MiddleServerImage
       id="illustration"
-      class="select-none text-p-l-l10 w-32 md:w-48 aspect-square"
+      class="select-none text-p-l-l10 min-h-[125px] h-[20vh] max-h-[200px] aspect-square"
     />
     <h2 class="text-2xl md:text-3xl mt-6 mb-2 font-semibold text-t-l-default dark:text-t-d-l14">
       {{ t('view.landing.title') }}
     </h2>
     <p
-      class="text-xs md:text-sm max-w-[280px] text-center font-light text-t-l-default dark:text-t-d-default"
+      class="text-xs md:text-sm max-w-[280px] text-center font-normal text-t-l-default dark:text-t-d-default"
     >
       {{ t(`view.landing.quotes.${randomKey}`) }}
     </p>
     <p
-      class="text-xs md:text-xs text-center mt-4 mb-4 md:mb-8 font-light text-t-l-default dark:text-t-d-default"
+      class="text-xs md:text-xs text-center mt-4 mb-4 md:mb-8 font-normal text-t-l-default dark:text-t-d-default"
     >
       - {{ t(`view.landing.authors.${randomKey}`) }} -
     </p>
