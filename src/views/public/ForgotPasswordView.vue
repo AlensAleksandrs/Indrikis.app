@@ -60,7 +60,7 @@ async function onSubmit() {
     <section class="w-full h-full p-6 flex flex-col items-center justify-center">
       <BigServerImage class="select-none text-p-l-l10 w-32 md:w-48 aspect-square"/>
       <h2
-        class="select-none text-2xl md:text-3xl mb-4 font-semibold text-t-l-default dark:text-t-d-l14"
+        class="select-none text-2xl md:text-3xl mt-6 mb-2 font-semibold text-t-l-default dark:text-t-d-l14"
       >
         {{ t('view.forgot-password.title') }}
       </h2>
@@ -81,7 +81,7 @@ async function onSubmit() {
         v-model="email"
         :valid="emailValid"
         @validation="emailValid = $event"
-        class="my-8"
+        class="my-4"
       />
 
       <PrimaryButton type="submit">{{ t('view.forgot-password.form-submit') }}</PrimaryButton>

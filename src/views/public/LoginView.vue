@@ -64,8 +64,7 @@ async function onSubmit() {
     <section class="w-full h-full p-6 flex flex-col items-center justify-center">
       <SmallServerImage class="select-none text-p-l-l10 w-32 md:w-48 aspect-square"/>
       <h2
-        class="select-none text-2xl md:text-3xl mb-4 font-semibold text-t-l-default dark:text-t-d-l14"
-      >
+        class="select-none text-2xl md:text-3xl mt-6 mb-2 font-semibold text-t-l-default dark:text-t-d-l14">
         {{ t('view.login.title') }}
       </h2>
       <InfoMessage
@@ -81,7 +80,7 @@ async function onSubmit() {
         }"
       />
 
-      <div class="flex flex-col gap-6 py-8">
+      <div class="flex flex-col gap-2 lg:gap-6 py-4 lg:py-8">
         <EmailInput v-model="email" :valid="emailValid" @validation="emailValid = $event" />
         <PasswordInput
           v-model="password"
