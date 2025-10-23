@@ -5,7 +5,7 @@ import { setupI18n } from './i18n'
 import { routes } from '@/router'
 
 const localeModules = import.meta.glob('@/locales/**/*.json', { eager: true })
-const LOCALES: Record<string, any> = {}
+const LOCALES: Record<string, unknown> = {}
 
 for (const [path, mod] of Object.entries(localeModules)) {
   const match = path.match(/locales\/([A-Za-z0-9_-]+)\/[A-Za-z0-9_-]+\.json$/)

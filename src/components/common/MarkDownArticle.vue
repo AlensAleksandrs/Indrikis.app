@@ -38,11 +38,11 @@ watch(locale, loadMarkdown)
 <style>
 @reference "tailwindcss";
 
-.prose:has(p[style*="italic"]) p:not([style*="italic"]),
-.prose:has(p[style*="italic"]) h2,
-.prose:has(p[style*="italic"]) h3,
-.prose:has(p[style*="italic"]) ul,
-.prose:has(p[style*="italic"]) ol {
+.prose:has(p[style*='italic']) p:not([style*='italic']),
+.prose:has(p[style*='italic']) h2,
+.prose:has(p[style*='italic']) h3,
+.prose:has(p[style*='italic']) ul,
+.prose:has(p[style*='italic']) ol {
   @apply text-justify;
 }
 </style>
