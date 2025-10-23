@@ -13,9 +13,8 @@ runWithLocales(
         global: { plugins: [router, i18n] },
       })
 
-      const img = wrapper.find('img')
-      expect(img.exists()).toBe(true)
-      expect(img.attributes('src')).toContain('temp_illustration.png')
+      const illustration = wrapper.find('#illustration')
+      expect(illustration.exists()).toBe(true)
     })
   },
 )

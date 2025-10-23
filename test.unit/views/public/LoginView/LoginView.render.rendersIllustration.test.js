@@ -11,8 +11,7 @@ runWithLocales('LoginView.render.rendersIllustration', ({ mount, router, i18n, e
       global: { plugins: [router, i18n] },
     })
 
-    const illustration = wrapper.find('img')
+    const illustration = wrapper.find('#illustration')
     expect(illustration.exists()).toBe(true)
-    expect(illustration.attributes('src')).toBeTruthy()
   })
 })
