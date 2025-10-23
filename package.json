@@ -18,9 +18,11 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.8",
     "@vitejs/plugin-vue": "^5.2.3",
     "@vueuse/core": "^13.9.0",
+    "marked": "^16.4.1",
     "pinia": "^3.0.1",
     "tailwindcss": "^4.1.8",
     "vite": "^6.2.4",
