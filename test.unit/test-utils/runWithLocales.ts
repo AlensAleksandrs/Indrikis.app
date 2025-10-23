@@ -4,12 +4,14 @@ import { mount } from '@vue/test-utils'
 import { setupI18n } from './i18n'
 import { routes } from '@/router'
 
-const localeModules = import.meta.glob('@/locales/*.json', { eager: true })
-const LOCALES = {}
+const localeModules = import.meta.glob('@/locales/**/*.json', { eager: true })
+const LOCALES: Record<string, any> = {}
 
 for (const [path, mod] of Object.entries(localeModules)) {
-  const match = path.match(/([A-Za-z0-9_-]+)\.json$/)
-  if (match) LOCALES[match[1].toLowerCase()] = mod
+  const match = path.match(/locales\/([A-Za-z0-9_-]+)\/[A-Za-z0-9_-]+\.json$/)
+  if (match) {
+    LOCALES[match[1].toLowerCase()] = mod
+  }
 }
 
 export function runWithLocales(name, runner) {

@@ -12,6 +12,7 @@ export default {
           'screen',
           'theme',
           'custom-variant',
+          'plugin',
         ],
       },
     ],

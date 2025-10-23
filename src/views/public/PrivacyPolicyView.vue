@@ -1,7 +1,9 @@
-<script setup></script>
+<script setup>
+import MarkDownArticle from '@/components/common/MarkDownArticle.vue'
+</script>
 
 <template>
-  <h1>In progress</h1>
+  <MarkDownArticle file="privacy-policy"/>
 </template>
 
 <style scoped></style>
