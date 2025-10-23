@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+import GoogleIcon from '@/assets/icons/GoogleIcon.svg'
 import SecondaryButton from '@/components/common/SecondaryButton.vue'
 
 const { t } = useI18n()
@@ -7,7 +8,7 @@ const { t } = useI18n()
 
 <template>
   <SecondaryButton>
-    <img src="@/assets/icons/GoogleIcon.svg" alt="Google" class="w-[15px] h-[15px]" />
+    <GoogleIcon class="w-[15px] h-[15px]" />
     {{ t('system.google.login') }}
   </SecondaryButton>
 </template>
