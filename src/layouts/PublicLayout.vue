@@ -14,9 +14,9 @@ const { t } = useI18n()
 
 <template>
   <div
-    class="flex h-screen w-screen max-w-[1250px] flex-col overflow-scroll bg-b-l-default shadow-md dark:bg-b-d-l8">
-    <header
-      class="flex w-full flex-row items-end justify-between p-4 pt-10 md:p-12 md:pb-4">
+    class="flex h-screen w-screen max-w-[1250px] flex-col overflow-scroll bg-b-l-default shadow-md dark:bg-b-d-l8"
+  >
+    <header class="flex w-full flex-row items-end justify-between p-4 pt-10 md:p-12 md:pb-4">
       <IndrikisAppLogo @click="router.push('/')" class="cursor-pointer" />
       <div class="flex flex-row gap-8">
         <ThemeSelect />

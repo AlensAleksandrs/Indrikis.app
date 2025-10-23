@@ -15,7 +15,10 @@ const randomKey = available[Math.floor(Math.random() * available.length)]
 
 <template>
   <section class="w-full h-full p-6 flex flex-col items-center justify-center">
-    <MiddleServerImage id="illustration" class="select-none text-p-l-l10 w-32 md:w-48 aspect-square"/>
+    <MiddleServerImage
+      id="illustration"
+      class="select-none text-p-l-l10 w-32 md:w-48 aspect-square"
+    />
     <h2 class="text-2xl md:text-3xl mt-6 mb-2 font-semibold text-t-l-default dark:text-t-d-l14">
       {{ t('view.landing.title') }}
     </h2>

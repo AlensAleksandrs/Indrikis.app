@@ -7,7 +7,6 @@ import PasswordInput from '@/components/auth/PasswordInput.vue'
 import SmallServerImage from '@/assets/illustrations/small-server.svg'
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import MiddleServerImage from '@/assets/illustrations/middle-server.svg'
 
 const { t } = useI18n()
 
@@ -63,9 +62,13 @@ async function onSubmit() {
 <template>
   <form @submit.prevent="onSubmit">
     <section class="w-full h-full p-6 flex flex-col items-center justify-center">
-      <SmallServerImage id="illustration" class="select-none text-p-l-l10 w-32 md:w-48 aspect-square"/>
+      <SmallServerImage
+        id="illustration"
+        class="select-none text-p-l-l10 w-32 md:w-48 aspect-square"
+      />
       <h2
-        class="select-none text-2xl md:text-3xl mt-6 mb-2 font-semibold text-t-l-default dark:text-t-d-l14">
+        class="select-none text-2xl md:text-3xl mt-6 mb-2 font-semibold text-t-l-default dark:text-t-d-l14"
+      >
         {{ t('view.login.title') }}
       </h2>
       <InfoMessage
