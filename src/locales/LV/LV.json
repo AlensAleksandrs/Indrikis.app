@@ -49,6 +49,12 @@
     "google": {
       "login": "Pieslēgties ar Google"
     },
+    "notification": {
+      "error": "Kļūda",
+      "warning": "Brīdinājums",
+      "information": "Paziņojums",
+      "success": "Panākums"
+    },
     "form": {
       "email": {
         "label": "E-pasta adrese",

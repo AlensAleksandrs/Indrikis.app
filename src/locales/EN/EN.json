@@ -49,6 +49,12 @@
     "google": {
       "login": "Sign in with Google"
     },
+    "notification": {
+      "error": "Error",
+      "warning": "Warning",
+      "information": "Information",
+      "success": "Success"
+    },
     "form": {
       "email": {
         "label": "Email address",

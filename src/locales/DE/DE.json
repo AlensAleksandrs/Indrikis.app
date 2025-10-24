@@ -49,6 +49,12 @@
     "google": {
       "login": "Mit Google anmelden"
     },
+    "notification": {
+      "error": "Fehler",
+      "warning": "Warnung",
+      "information": "Information",
+      "success": "Erfolg"
+    },
     "form": {
       "email": {
         "label": "E-Mail-Adresse",
