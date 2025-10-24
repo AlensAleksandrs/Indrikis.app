@@ -52,7 +52,7 @@ onBeforeUnmount(() => {
 
     <ul
       v-if="open"
-      class="absolute z-10 mt-2 w-16 rounded-md bg-b-l-l2 shadow-lg ring-1 ring-black/10 focus:outline-none dark:bg-b-d-l10"
+      class="absolute right-0 z-10 mt-2 w-16 rounded-md bg-b-l-l2 shadow-lg ring-1 ring-black/10 focus:outline-none dark:bg-b-d-l10"
       role="listbox"
     >
       <li

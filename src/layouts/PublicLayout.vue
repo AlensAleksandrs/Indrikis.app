@@ -14,8 +14,7 @@ const { t } = useI18n()
 
 <template>
   <div
-    class="flex min-h-screen w-screen max-w-[1250px] flex-col overflow-y-auto bg-b-l-default shadow-md dark:bg-b-d-l8"
-  >
+    class="flex min-h-screen w-screen max-w-[1250px] flex-col overflow-y-auto bg-b-l-default shadow-md dark:bg-b-d-l8">
     <header class="flex w-full flex-row items-end justify-between p-4 pt-10 md:p-12 md:pb-4">
       <IndrikisAppLogo @click="router.push('/')" class="cursor-pointer" />
       <div class="flex flex-row gap-8">
@@ -24,7 +23,7 @@ const { t } = useI18n()
       </div>
     </header>
 
-    <main class="grow">
+    <main class="grow flex items-center justify-center">
       <RouterView />
     </main>
 
