@@ -21,12 +21,14 @@ watch(locale, (newLocale) => {
   localStorage.setItem('locale', newLocale)
 })
 import { useNotifications } from '@/stores/useNotifications'
+import NoticeOverlay from '@/components/interface/CookieNotice.vue'
 const notify = useNotifications()
 notify.add('information', 'Development mode active')
 </script>
 
 <template>
   <NotificationList />
+  <NoticeOverlay />
   <component :is="layouts[route.meta.layout] || PublicLayout">
     <RouterView />
   </component>

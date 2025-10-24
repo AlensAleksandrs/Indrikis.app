@@ -70,6 +70,55 @@
           "special-symbol": "Password must contain at least one special character"
         }
       }
+    },
+    "cookies": {
+      "notice": {
+        "title": "Cookie Notice",
+        "lastUpdated": "Last updated: October 2025",
+        "categories": {
+          "policy": "Policy",
+          "services": "Services",
+          "choices": "Your Choices"
+        },
+        "policy": {
+          "intro": "This Cookie Notice applies to the platform accessible under indrikis.lv (the “Platform”), operated by SIA \"Rendezvous\".",
+          "firstParty": "The Platform uses cookies and similar technologies (“cookies”). Cookies are small text files or fragments of data stored on your device. Cookies may be placed directly by us (first-party cookies) or by third parties providing services to us (third-party cookies).",
+          "why": "Cookies are used to ensure secure operation of the Platform, enable document workflows, remember preferences, and improve usability. Some cookies are essential, others require your consent.",
+          "categories": {
+            "necessary": {
+              "title": "Strictly Necessary Cookies",
+              "text": "These cookies are essential for authentication, secure document access, language persistence, and privacy preferences. Without them, the Platform cannot function. Legal basis: legitimate interest."
+            },
+            "performance": {
+              "title": "Performance Cookies",
+              "text": "These cookies collect information on system stability, error detection, and usage patterns (e.g., number of visits, time spent, pages viewed). They help us improve the reliability and efficiency of the Platform. Legal basis: consent."
+            },
+            "functionality": {
+              "title": "Functionality Cookies",
+              "text": "These cookies allow the Platform to remember your settings, such as chosen language, interface preferences, and session customisations. They also enable enhanced features like file previews. Legal basis: consent."
+            },
+            "marketing": {
+              "title": "Marketing Cookies",
+              "text": "These cookies may be set by us or trusted partners to measure the effectiveness of communications and deliver relevant updates about our services. They can also limit how often you see a message. Legal basis: consent."
+            }
+          }
+        },
+        "services": {
+          "intro": "Some cookies are placed by third-party services that help us operate the Platform. Below you can find an overview of services and their cookies."
+        },
+        "choices": {
+          "intro": "You can decide whether to allow non-essential cookies. Strictly necessary cookies are always enabled as they are required for the Platform to function.",
+          "necessary": "Strictly necessary cookies (always enabled)",
+          "performance": "Allow performance cookies",
+          "functionality": "Allow functionality cookies",
+          "marketing": "Allow marketing cookies"
+        },
+        "buttons": {
+          "confirm": "Save Preferences",
+          "mandatory": "Accept mandatory",
+          "accept": "Accept All"
+        }
+      }
     }
   }
 }

@@ -70,6 +70,55 @@
           "special-symbol": "Parolei jāietver vismaz viens speciālais simbols"
         }
       }
+    },
+    "cookies": {
+      "notice": {
+        "title": "Sīkdatņu paziņojums",
+        "lastUpdated": "Pēdējo reizi atjaunots: 2025. gada oktobrī",
+        "categories": {
+          "policy": "Politika",
+          "services": "Pakalpojumi",
+          "choices": "Jūsu izvēles"
+        },
+        "policy": {
+          "intro": "Šis sīkdatņu paziņojums attiecas uz platformu indrikis.lv (turpmāk – \"Platforma\"), kuru uztur SIA \"Rendezvous\".",
+          "firstParty": "Platforma izmanto sīkdatnes un līdzīgas tehnoloģijas. Sīkdatnes ir nelieli teksta faili, kas tiek saglabāti jūsu ierīcē. Tās var iestatīt mēs paši (pirmās puses sīkdatnes) vai trešās puses pakalpojumu sniedzēji (trešās puses sīkdatnes).",
+          "why": "Sīkdatnes tiek izmantotas, lai nodrošinātu Platformas drošu darbību, dokumentu aprites funkcijas, valodas izvēles saglabāšanu un lietojamības uzlabošanu. Daļa no tām ir obligātas, bet citu izmantošanai nepieciešama jūsu piekrišana.",
+          "categories": {
+            "necessary": {
+              "title": "Obligāti nepieciešamās sīkdatnes",
+              "text": "Šīs sīkdatnes nodrošina autentifikāciju, drošu piekļuvi dokumentiem, valodas saglabāšanu un konfidencialitātes iestatījumus. Bez tām Platforma nevar darboties. Juridiskais pamats: leģitīmās intereses."
+            },
+            "performance": {
+              "title": "Veiktspējas sīkdatnes",
+              "text": "Šīs sīkdatnes apkopo informāciju par sistēmas stabilitāti, kļūdu noteikšanu un lietošanas paradumiem (piem., apmeklējumu skaits, pavadītais laiks, apskatītās lapas). Tās palīdz mums uzlabot uzticamību un efektivitāti. Juridiskais pamats: piekrišana."
+            },
+            "functionality": {
+              "title": "Funkcionalitātes sīkdatnes",
+              "text": "Šīs sīkdatnes ļauj Platformai atcerēties jūsu iestatījumus (piem., izvēlēto valodu, interfeisa uzstādījumus) un nodrošināt papildu iespējas, piemēram, dokumentu priekšskatījumus. Juridiskais pamats: piekrišana."
+            },
+            "marketing": {
+              "title": "Mārketinga sīkdatnes",
+              "text": "Šīs sīkdatnes var iestatīt mēs vai uzticami partneri, lai mērītu komunikācijas efektivitāti un nodrošinātu jums atbilstošus jaunumus par mūsu pakalpojumiem. Tās var arī ierobežot, cik bieži redzat konkrētu paziņojumu. Juridiskais pamats: piekrišana."
+            }
+          }
+        },
+        "services": {
+          "intro": "Dažas sīkdatnes tiek iestatītas ar trešo pušu pakalpojumu starpniecību, kas palīdz mums uzturēt Platformu. Zemāk pieejams to pārskats."
+        },
+        "choices": {
+          "intro": "Jūs varat izvēlēties, vai atļaut neobligātās sīkdatnes. Obligāti nepieciešamās sīkdatnes vienmēr ir iespējotas, jo tās ir nepieciešamas Platformas darbībai.",
+          "necessary": "Obligāti nepieciešamās sīkdatnes (vienmēr aktīvas)",
+          "performance": "Atļaut veiktspējas sīkdatnes",
+          "functionality": "Atļaut funkcionalitātes sīkdatnes",
+          "marketing": "Atļaut mārketinga sīkdatnes"
+        },
+        "buttons": {
+          "confirm": "Saglabāt izvēles",
+          "mandatory": "Pieņemt obligātās",
+          "accept": "Pieņemt visas"
+        }
+      }
     }
   }
 }

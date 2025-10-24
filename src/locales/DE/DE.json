@@ -70,6 +70,55 @@
           "special-symbol": "Das Passwort muss mindestens ein Sonderzeichen enthalten"
         }
       }
+    },
+    "cookies": {
+      "notice": {
+        "title": "Cookie-Hinweis",
+        "lastUpdated": "Zuletzt aktualisiert: Oktober 2025",
+        "categories": {
+          "policy": "Richtlinie",
+          "services": "Dienste",
+          "choices": "Ihre Auswahl"
+        },
+        "policy": {
+          "intro": "Dieser Cookie-Hinweis gilt für die Plattform indrikis.lv (die „Plattform“), betrieben von SIA \"Rendezvous\".",
+          "firstParty": "Die Plattform verwendet Cookies und ähnliche Technologien. Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden. Sie können entweder direkt von uns gesetzt werden (First-Party-Cookies) oder von Drittanbietern (Third-Party-Cookies).",
+          "why": "Cookies werden verwendet, um den sicheren Betrieb der Plattform zu gewährleisten, Dokumenten-Workflows zu ermöglichen, Spracheinstellungen zu speichern und die Benutzerfreundlichkeit zu verbessern. Einige Cookies sind zwingend erforderlich, andere erfordern Ihre Zustimmung.",
+          "categories": {
+            "necessary": {
+              "title": "Unbedingt erforderliche Cookies",
+              "text": "Diese Cookies sind notwendig für Authentifizierung, sicheren Dokumentenzugriff, Spracheinstellungen und Datenschutzpräferenzen. Ohne sie kann die Plattform nicht funktionieren. Rechtsgrundlage: berechtigtes Interesse."
+            },
+            "performance": {
+              "title": "Leistungs-Cookies",
+              "text": "Diese Cookies sammeln Informationen über Stabilität, Fehlererkennung und Nutzungsverhalten (z. B. Anzahl der Besuche, Verweildauer, aufgerufene Seiten). Sie helfen uns, die Zuverlässigkeit und Effizienz der Plattform zu verbessern. Rechtsgrundlage: Einwilligung."
+            },
+            "functionality": {
+              "title": "Funktionalitäts-Cookies",
+              "text": "Diese Cookies ermöglichen es, Einstellungen wie Sprache, Benutzeroberfläche oder Sitzungseinstellungen zu speichern und zusätzliche Funktionen wie Dateivorschauen bereitzustellen. Rechtsgrundlage: Einwilligung."
+            },
+            "marketing": {
+              "title": "Marketing-Cookies",
+              "text": "Diese Cookies werden von uns oder vertrauenswürdigen Partnern gesetzt, um die Effektivität der Kommunikation zu messen und relevante Informationen über unsere Dienste bereitzustellen. Sie können auch die Häufigkeit bestimmter Mitteilungen begrenzen. Rechtsgrundlage: Einwilligung."
+            }
+          }
+        },
+        "services": {
+          "intro": "Einige Cookies werden von Drittanbietern gesetzt, die uns beim Betrieb der Plattform unterstützen. Nachfolgend finden Sie eine Übersicht."
+        },
+        "choices": {
+          "intro": "Sie können entscheiden, ob Sie nicht notwendige Cookies zulassen. Unbedingt erforderliche Cookies sind immer aktiviert, da sie für den Betrieb der Plattform notwendig sind.",
+          "necessary": "Unbedingt erforderliche Cookies (immer aktiv)",
+          "performance": "Leistungs-Cookies zulassen",
+          "functionality": "Funktionalitäts-Cookies zulassen",
+          "marketing": "Marketing-Cookies zulassen"
+        },
+        "buttons": {
+          "confirm": "Einstellungen speichern",
+          "mandatory": "Notwendige akzeptieren",
+          "accept": "Alle akzeptieren"
+        }
+      }
     }
   }
 }
