@@ -196,3 +196,12 @@
   --color-a-d-l14: #73e2ba;
   --color-a-d-l16: #7ce4be;
 }
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+}
