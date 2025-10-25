@@ -7,6 +7,7 @@ import DashboardView from '@/views/client/DashboardView.vue'
 import ForgotPasswordView from '@/views/public/ForgotPasswordView.vue'
 import TermsOfServiceView from '@/views/public/TermsOfServiceView.vue'
 import HelpView from '@/views/public/HelpView.vue'
+import DocumentView from '@/views/client/DocumentView.vue'
 
 export const routes = [
   { path: '/', name: 'Landing Page', component: LandingView, meta: { layout: 'public' } },
@@ -31,6 +32,7 @@ export const routes = [
   },
   { path: '/help', name: 'Assistance', component: HelpView, meta: { layout: 'public' } },
   { path: '/dashboard', name: 'Dashboard', component: DashboardView, meta: { layout: 'client' } },
+  { path: '/documents', name: 'Documents', component: DocumentView, meta: { layout: 'client' } },
 ]
 
 export function createAppRouter() {

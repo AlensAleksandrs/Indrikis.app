@@ -6,7 +6,7 @@ const notifications = useNotifications()
 </script>
 
 <template>
-  <div class="fixed top-24 sm:top-4 right-0 z-50 px-4 space-y-2">
+  <div class="fixed top-8 sm:top-4 right-0 z-50 px-4 space-y-2">
     <TransitionGroup name="fade" tag="div" class="flex flex-col gap-2">
       <Notification
         v-for="n in notifications.items"

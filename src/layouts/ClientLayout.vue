@@ -3,6 +3,15 @@ import IndrikisAppLogo from '@/components/common/IndrikisAppLogo.vue'
 import LanguageSelect from '@/components/interface/LanguageSelect.vue'
 import ThemeSelect from '@/components/interface/ThemeSelect.vue'
 import SearchBar from '@/components/common/SearchBar.vue'
+import LinkBar from '@/components/navigation/LinkBar.vue'
+import LinkList from '@/components/navigation/LinkList.vue'
+
+const NavigationMap = [
+  { title: 'Sākums', icon: '', link: 'dashboard' },
+  { title: 'Dokumentu saraksts', icon: '', link: 'documents' },
+  { title: 'Uzdevumu saraksts', icon: '', link: 'tasks' },
+  { title: 'Lietotāja konts', icon: '', link: 'account' },
+]
 </script>
 
 <template>
@@ -17,6 +26,7 @@ import SearchBar from '@/components/common/SearchBar.vue'
       <section
         class="flex grow sm:bg-b-l-default overflow-auto sm:dark:bg-b-d-l8 sm:justify-center"
       >
+        <LinkList class="hidden sm:flex" :map="NavigationMap" />
         <RouterView class="sm:hidden" />
       </section>
       <footer
@@ -24,6 +34,7 @@ import SearchBar from '@/components/common/SearchBar.vue'
       >
         <ThemeSelect />
         <LanguageSelect />
+        <LinkBar class="flex sm:hidden" :map="NavigationMap" />
       </footer>
     </div>
     <div>

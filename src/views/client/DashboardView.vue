@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <section class="px-12 py-6">
+  <section class="px-6 sm:px-12 py-6">
     <h3 class="select-none text-md font-light text-t-l-default dark:text-t-d-default">
       Hi, Name Surname,
     </h3>
