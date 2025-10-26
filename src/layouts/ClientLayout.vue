@@ -30,7 +30,7 @@ const NavigationMap = [
         <RouterView class="sm:hidden" />
       </section>
       <footer
-        class="flex flex-row bg-b-l-default dark:bg-b-d-l8 w-full items-center justify-center gap-4 p-6"
+        class="fixed bottom-0 left-0 right-0 sm:flex flex-row bg-b-l-default dark:bg-b-d-l8 w-full items-center justify-center gap-4 p-6"
       >
         <ThemeSelect />
         <LanguageSelect />

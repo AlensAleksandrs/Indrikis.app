@@ -14,9 +14,7 @@ defineProps<{
 </script>
 
 <template>
-  <nav
-    class="fixed bottom-0 left-0 right-0 bg-b-l-default dark:bg-b-d-default shadow-md flex justify-around py-2"
-  >
+  <nav class="w-full bg-b-l-default dark:bg-b-d-default shadow-md flex justify-around py-2">
     <RouterLink
       v-for="item in map"
       :key="item.link"
